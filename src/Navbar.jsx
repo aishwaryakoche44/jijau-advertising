@@ -1,66 +1,128 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Work", path: "/work" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-white shadow-md">
-      <div className="w-full px-5 py-3 flex items-center justify-between">
+    <nav className="w-full fixed top-0 left-0 z-50 backdrop-blur-xl bg-black/60 border-b border-white/10">
+      
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-        {/* ---- LOGO ---- */}
-        <div className="flex items-center gap-3">
+        {/* ================= LOGO ================= */}
+        <Link to="/" className="flex items-center gap-3 group relative">
+          
+          {/* Glow */}
+          <div className="absolute -inset-2 bg-[#d4a017]/10 blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
+
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpU1G6vS9xhloATb48u6s51EgGFNijIyg31g&s"
             alt="Logo"
-            className="w-15 h-12 object-contain"
+            className="w-12 h-10 object-contain mix-blend-lighten relative z-10"
           />
-          <h1 className="text-xl font-bold tracking-wide text-gray-800">
-            JIJAU <span className="text-[#d4a017]">ADVERTISING</span>
+
+          <h1 className="text-xl font-black uppercase tracking-tight relative z-10">
+            <span className="text-white">Jijau</span>{" "}
+            <span className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
+              Advertising
+            </span>
           </h1>
+        </Link>
+
+        {/* ================= DESKTOP MENU ================= */}
+        <ul className="hidden md:flex items-center gap-10">
+          {navLinks.map((link) => (
+            <li key={link.name} className="relative group">
+              <Link
+                to={link.path}
+                className={`text-sm uppercase tracking-widest font-bold transition duration-300 ${
+                  location.pathname === link.path
+                    ? "text-[#d4a017]"
+                    : "text-white/80 hover:text-white"
+                }`}
+              >
+                {link.name}
+              </Link>
+
+              {/* GOLD UNDERLINE ANIMATION */}
+              <span
+                className={`absolute left-0 -bottom-2 h-[2px] bg-gradient-to-r from-[#d4a017] to-yellow-400 transition-all duration-300 ${
+                  location.pathname === link.path
+                    ? "w-full"
+                    : "w-0 group-hover:w-full"
+                }`}
+              />
+            </li>
+          ))}
+        </ul>
+
+        {/* ================= CTA BUTTON ================= */}
+        <div className="hidden md:block">
+          <Link
+            to="/contact"
+            className="px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest
+            bg-gradient-to-r from-[#d4a017] to-yellow-400 text-black
+            hover:scale-105 hover:shadow-lg hover:shadow-[#d4a017]/30 transition"
+          >
+            Get Strategy
+          </Link>
         </div>
 
-        {/* ---- DESKTOP MENU ---- */}
-        <ul className="hidden md:flex items-center gap-8">
-          {["Home", "About", "Services", "Work", "Contact"].map((item) => (
-            <li key={item}>
+        {/* ================= MOBILE BUTTON ================= */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* ================= MOBILE MENU ================= */}
+      <div
+        className={`md:hidden absolute w-full bg-black/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300 ${
+          open ? "max-h-96 py-6" : "max-h-0 overflow-hidden"
+        }`}
+      >
+        <ul className="flex flex-col items-center gap-6">
+          {navLinks.map((link) => (
+            <li key={link.name}>
               <Link
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="text-gray-700 text-lg font-medium hover:text-[#d4a017] transition-all"
+                to={link.path}
+                onClick={() => setOpen(false)}
+                className={`text-sm font-bold uppercase tracking-widest transition ${
+                  location.pathname === link.path
+                    ? "text-[#d4a017]"
+                    : "text-white hover:text-[#d4a017]"
+                }`}
               >
-                {item}
+                {link.name}
               </Link>
             </li>
           ))}
         </ul>
 
-        {/* ---- MOBILE BUTTON ---- */}
-        <button
-          className="md:hidden text-3xl text-gray-800"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? "✖" : "☰"}
-        </button>
-      </div>
-
-      {/* ---- MOBILE MENU ---- */}
-      {open && (
-        <div className="md:hidden bg-white px-6 pb-4 shadow-md">
-          <ul className="flex flex-col gap-5 mt-3 text-lg">
-            {["Home", "About", "Services", "Work", "Contact"].map((item) => (
-              <li key={item}>
-                <Link
-                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  onClick={() => setOpen(false)}
-                  className="block py-2 text-gray-700 hover:text-[#d4a017] transition-all"
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        {/* Mobile CTA */}
+        <div className="flex justify-center mt-6">
+          <Link
+            to="/contact"
+            onClick={() => setOpen(false)}
+            className="px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest
+            bg-gradient-to-r from-[#d4a017] to-yellow-400 text-black"
+          >
+            Get Strategy
+          </Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

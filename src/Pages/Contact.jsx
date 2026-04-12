@@ -1,180 +1,157 @@
 import React from "react";
+import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // 🔥 SweetAlert Popup
+    Swal.fire({
+      title: "🚀 Inquiry Sent!",
+      text: "We’ll contact you within 24 hours.",
+      icon: "success",
+      confirmButtonText: "Great!",
+      confirmButtonColor: "#d4a017",
+      background: "#0a0a0a",
+      color: "#fff",
+      backdrop: "rgba(0,0,0,0.8)",
+    });
+
+    // optional: reset form
+    e.target.reset();
+  };
+
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-black text-white pt-24">
 
       {/* ---- PAGE HEADER ---- */}
-      <section className="relative w-full py-20 bg-gradient-to-b from-gray-100 to-white">
-        <div className="max-w-4xl mx-auto text-center px-5">
-          <h1 className="text-5xl font-extrabold text-black">
-            Contact <span className="text-[#d4a017]">Jijau Advertising</span>
-          </h1>
-          <p className="text-gray-600 mt-4 text-lg">
-            Let’s build impactful Political, Digital & Strategic campaigns together.
-          </p>
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <p className="text-[#d4a017] font-bold uppercase tracking-widest mb-4">
+          Get In Touch
+        </p>
 
-          <div className="mt-6 flex justify-center space-x-4">
-            <div className="w-20 h-1 bg-[#d4a017] rounded-full"></div>
-            <div className="w-10 h-1 bg-gray-600 rounded-full"></div>
-            <div className="w-20 h-1 bg-[#d4a017] rounded-full"></div>
-          </div>
-        </div>
+        <h1 className="text-5xl md:text-7xl font-black leading-tight">
+          SECURE YOUR <br />
+          <span className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
+            VICTORY TODAY
+          </span>
+        </h1>
       </section>
 
       {/* ---- CONTACT INFO + FORM ---- */}
-      <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+      <section className="max-w-7xl mx-auto px-6 pb-24 grid lg:grid-cols-2 gap-20">
 
-        {/* ---- LEFT SIDE INFO - NOW WITH STRENGTH STYLE ICONS ---- */}
-        <div className="bg-white border border-gray-200 rounded-2xl shadow-xl p-10">
-          <h2 className="text-3xl font-bold text-black mb-6">Get In Touch</h2>
-
-          <p className="text-gray-700 mb-8 leading-relaxed">
-            Whether you're planning an election campaign, digital promotion, 
-            or seeking strategic brand communication — our team is ready to assist you.
+        {/* ---- LEFT SIDE INFO ---- */}
+        <div>
+          <p className="text-xl text-gray-400 font-light mb-12 leading-relaxed">
+            Connect with Maharashtra's most trusted political strategy team.
+            Our command centers in Mumbai and Nashik are ready to deploy.
           </p>
 
-          <div className="grid gap-6">
+          <div className="space-y-10">
 
-            {/* Card 1 */}
-            <div className="p-5 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-[#d4a017]/50 bg-white group">
-              <div className="flex items-center gap-4">
-                {/* ICON (same as strengths) */}
-                <div className="w-12 h-12 rounded-full bg-[#d4a017] flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rounded-full"></div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-black group-hover:text-[#d4a017] transition duration-300">
-                    Office Location
-                  </h4>
-                  <p className="text-gray-700 text-sm">Mumbai • Nashik • Maharashtra</p>
-                </div>
+            <div className="flex gap-6 items-start">
+              <div className="w-14 h-14 bg-[#111] text-[#d4a017] rounded-full flex items-center justify-center">
+                <MapPin size={24} />
+              </div>
+              <div>
+                <h4 className="text-lg font-black uppercase">Headquarters</h4>
+                <p className="text-gray-500 mt-1">Mumbai • Nashik • Maharashtra</p>
               </div>
             </div>
 
-            {/* Card 2 */}
-            <div className="p-5 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-[#d4a017]/50 bg-white group">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#d4a017] flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rounded-full"></div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-black group-hover:text-[#d4a017] transition duration-300">
-                    Phone Number
-                  </h4>
-                  <p className="text-gray-700 text-sm">+91 93262 26888</p>
-                </div>
+            <div className="flex gap-6 items-start">
+              <div className="w-14 h-14 bg-[#111] text-[#d4a017] rounded-full flex items-center justify-center">
+                <Phone size={24} />
+              </div>
+              <div>
+                <h4 className="text-lg font-black uppercase">Direct Line</h4>
+                <p className="text-gray-500 mt-1">+91 93262 26888</p>
               </div>
             </div>
 
-            {/* Card 3 */}
-            <div className="p-5 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-[#d4a017]/50 bg-white group">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#d4a017] flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rounded-full"></div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-black group-hover:text-[#d4a017] transition duration-300">
-                    Email Address
-                  </h4>
-                  <p className="text-gray-700 text-sm">contact@jijauadvertising.in</p>
-                </div>
+            <div className="flex gap-6 items-start">
+              <div className="w-14 h-14 bg-[#111] text-[#d4a017] rounded-full flex items-center justify-center">
+                <Mail size={24} />
+              </div>
+              <div>
+                <h4 className="text-lg font-black uppercase">Email Address</h4>
+                <p className="text-gray-500 mt-1">
+                  contact@jijauadvertising.in
+                </p>
               </div>
             </div>
-
-            {/* Card 4 */}
-            <div className="p-5 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-[#d4a017]/50 bg-white group">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#d4a017] flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rounded-full"></div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-black group-hover:text-[#d4a017] transition duration-300">
-                    Website
-                  </h4>
-                  <p className="text-gray-700 text-sm">www.jijauadvertising.in</p>
-                </div>
-              </div>
-            </div>
-
           </div>
+
+          {/* WhatsApp CTA */}
+          <a
+            href="https://wa.me/919326226888"
+            className="mt-16 inline-flex items-center gap-4 bg-gradient-to-r from-[#25D366] to-green-400 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-all duration-300"
+          >
+            <MessageCircle size={24} /> Direct WhatsApp Strategy
+          </a>
         </div>
 
         {/* ---- CONTACT FORM ---- */}
-        <div className="bg-white border border-gray-200 rounded-2xl shadow-xl p-10">
-          <h2 className="text-3xl font-bold text-black mb-6">Contact Form</h2>
+        <div className="bg-[#0a0a0a] rounded-[40px] p-6 md:p-16 border border-white/10 shadow-xl">
+          <form className="space-y-8" onSubmit={handleSubmit}>
 
-          <form className="space-y-6">
-            <input type="text" placeholder="Your Name"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#d4a017]" />
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-2">
+                <label className="text-xs font-black uppercase tracking-widest text-white/40">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  required
+                  className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#d4a017] outline-none transition"
+                />
+              </div>
 
-            <input type="email" placeholder="Your Email"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#d4a017]" />
+              <div className="space-y-2">
+                <label className="text-xs font-black uppercase tracking-widest text-white/40">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  required
+                  className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#d4a017] outline-none transition"
+                />
+              </div>
+            </div>
 
-            <input type="text" placeholder="Phone Number"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#d4a017]" />
+            <div className="space-y-2">
+              <label className="text-xs font-black uppercase tracking-widest text-white/40">
+                Interested Service
+              </label>
+              <select className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#d4a017] outline-none">
+                <option className="text-black">Political Campaigning</option>
+                <option className="text-black">Digital Marketing</option>
+                <option className="text-black">War Room Setup</option>
+              </select>
+            </div>
 
-            <textarea placeholder="Your Message" rows="4"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#d4a017]"></textarea>
+            <div className="space-y-2">
+              <label className="text-xs font-black uppercase tracking-widest text-white/40">
+                Message
+              </label>
+              <textarea
+                rows="4"
+                required
+                className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#d4a017] outline-none transition"
+              />
+            </div>
 
-            <button className="w-full py-3 bg-[#d4a017] text-white rounded-lg font-semibold hover:bg-black transition">
-              Send Message
+            <button
+              type="submit"
+              className="w-full py-5 bg-gradient-to-r from-[#d4a017] to-yellow-400 text-black font-black uppercase tracking-widest rounded-full hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3"
+            >
+              Send Inquiry <Send size={20} />
             </button>
           </form>
         </div>
       </section>
-
-      {/* ---- FEEDBACK FORM SECTION ---- */}
-      <section className="max-w-5xl mx-auto px-6 pb-20">
-        <div className="bg-white border border-gray-200 rounded-2xl shadow-xl p-10">
-
-          <h2 className="text-3xl font-bold text-black text-center mb-6">
-            Share Your Feedback
-          </h2>
-          <p className="text-gray-600 text-center mb-10">
-            Help us improve our Political, Digital & Branding services.
-          </p>
-
-          <form className="grid md:grid-cols-2 gap-6">
-
-            <input type="text" placeholder="Your Name"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:border-[#d4a017]" />
-
-            <input type="email" placeholder="Your Email"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:border-[#d4a017]" />
-
-            <select className="w-full p-3 border border-gray-300 rounded-lg focus:border-[#d4a017]">
-              <option>Rate Your Experience</option>
-              <option>⭐ Very Poor</option>
-              <option>⭐⭐ Poor</option>
-              <option>⭐⭐⭐ Good</option>
-              <option>⭐⭐⭐⭐ Very Good</option>
-              <option>⭐⭐⭐⭐⭐ Excellent</option>
-            </select>
-
-            <select className="w-full p-3 border border-gray-300 rounded-lg focus:border-[#d4a017]">
-              <option>Service You Used</option>
-              <option>Political Campaigning</option>
-              <option>Digital Marketing</option>
-              <option>Branding & Identity</option>
-              <option>Event Management</option>
-              <option>Other</option>
-            </select>
-
-            <textarea placeholder="Your Feedback..." rows="4"
-              className="md:col-span-2 w-full p-3 border border-gray-300 rounded-lg focus:border-[#d4a017]"></textarea>
-
-            <button className="md:col-span-2 w-full py-3 bg-[#d4a017] text-white rounded-lg font-semibold hover:bg-black transition">
-              Submit Feedback
-            </button>
-          </form>
-        </div>
-      </section>
-
     </div>
   );
 };

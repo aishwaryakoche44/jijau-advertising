@@ -5,7 +5,6 @@ const Work = () => {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
 
-  // 🔥 ALL IMAGES + 50-word DESCRIPTION ADDED
   const items = [
     {
       name: "Vatashi",
@@ -29,186 +28,154 @@ const Work = () => {
       name: "KWALITY WORLD DEVELOPERS",
       img: "https://www.3dotsdesign.in/mockups/kwd/1.webp",
       description:
-        "Vrindavan Heights by Kwality Developers focuses on delivering spacious, affordable homes in prime Magarpatta—addressing the city’s rising small-home issue. At 3 Dots Design Pvt. Ltd., we crafted a curiosity-driven campaign that highlighted real value and smart living through integrated print, outdoor, digital, and social media communication."
+        "Vrindavan Heights by Kwality Developers focuses on delivering spacious, affordable homes in prime Magarpatta—addressing the city’s rising small-home issue. At 3 Dots Design Pvt. Ltd., we crafted a curiosity-driven campaign that highlighted real value and smart living through integrated communication."
     },
     {
       name: "EXER ENERGY",
       img: "https://www.3dotsdesign.in/images/portfolio/exer/website.jpg",
       description:
-        "EXER ENERGY entered the rising e-scooter market with the goal of disrupting the industry through fast innovation and stylish design. Their production plant was set up in just 45 days, proving their ambition and competitive spirit. For the campaign, instead of focusing on performance, we highlighted the feeling of riding an EXER scooter. This led to the concept “The Sleek God”—a confident, modern identity inspired by its sleek looks and intelligent, playful brand attitude.Our creatives showcased EXER as more than a scooter—an experience built for bold, style-driven riders."
+        "EXER ENERGY entered the rising e-scooter market with fast innovation and stylish design. We created the concept “The Sleek God,” positioning it as a bold, modern riding experience."
     },
     {
       name: "BOOKSTATION",
       img: "https://www.3dotsdesign.in/mockups/bookstation/RGT2J09.webp",
       description:
-        "Bookstation connects Pune’s Appa Balwant Chowk bookstores with readers through 5-hour citywide delivery and quick pan-India shipping. We built a witty, hyperlocal campaign using Pune’s culture, slangs and book references to highlight its unique speed and identity. Our strategy helped Bookstation stand out as a smart, fast and relatable online book delivery brand."
+        "Bookstation connects Pune bookstores with readers through fast delivery. We built a witty hyperlocal campaign using Pune culture and language to create strong brand recall."
     },
     {
       name: "VIVEDAA ORGANIX",
       img: "https://www.3dotsdesign.in/mockups/vivedaa/1234.webp",
       description:
-        "Vivedaa Organix entered a crowded herbal market with a unique blend of 20+ natural ingredients. We positioned the brand as “Herbal Luxury Hair Oil,” offering a spa-like experience at an affordable price. With elegant green packaging and clean branding, we helped the product stand out as a premium yet natural wellness choice."
+        "Vivedaa Organix was positioned as Herbal Luxury Hair Oil with elegant branding and premium visual identity to stand out in a crowded market."
     },
     {
       name: "Jehangir Hospital",
       img: "https://www.3dotsdesign.in/mockups/jehangir/5.jpg",
       description:
-        "For Jehangir Hospital, a 79-year-old healthcare institution, we focused on clear and memorable communication across all media. We led launch campaigns for key units like Breast Care, Pulmonology, IVF, Wellness and more. Our blend of strategic insight and creative storytelling strengthened the hospital’s brand visibility and patient engagement."
+        "We led campaigns for key hospital units with clear communication and strong storytelling, improving visibility and engagement."
     },
     {
       name: "Happynest",
       img: "https://www.3dotsdesign.in/images/portfolio/happynest/print-media/01.jpg",
       description:
-        "Happynest was created as an independent category of “value for money” homes designed for mid-segment buyers. We built a warm, confidence-boosting communication strategy that assured families their dream home was within reach. With impactful TVCs, outdoor ads and promotional campaigns, we shaped a relatable, uplifting brand identity."
+        "We created a warm and relatable identity for affordable housing, backed by impactful TVCs and outdoor campaigns."
     },
     {
       name: "7 Plumeria Drive",
       img: "https://www.3dotsdesign.in/images/portfolio/7pd/thumbnail.jpg",
       description:
-        "7 Plumeria Drive is a premium luxury residence crafted for an elite audience. Our campaign focused on creating intrigue around the number “7,” turning it into the hero of the brand. By linking all premium features to this concept, we built a striking, memorable identity that stood out in the luxury market."
+        "Luxury project branding focused on the number '7' to create a premium and memorable identity."
     },
     {
       name: "Pushpa International School",
       img: "https://www.3dotsdesign.in/images/portfolio/pis/pis-thumbnail.jpg",
       description:
-        "Pushpa International School entered a competitive education market with no prior history. We positioned it as a New Age school for Generation Next, creating a complete brand identity from logo to website and promotional campaigns. With a strong, child-friendly yet serious communication approach, the school achieved full admissions within just three months."
+        "Built a complete identity and campaign that resulted in full admissions within 3 months."
     },
     {
       name: "KONKAN TRAILS",
       img: "https://www.3dotsdesign.in/mockups/konkan-trails/R5A6T7P.webp",
       description:
-        "Konkan Trails offers vacation villas and plots across 51 serene acres in Dapoli. We turned “51” into the hero of the campaign, creatively blending it into words and visuals to highlight the project’s neo-rural Konkani lifestyle. The result was a playful, memorable branding that brought the Konkan experience to life."
-    },
-    {
-      name: "Tarsh Gastronomia & Bar",
-      img: "https://www.3dotsdesign.in/images/portfolio/tarsh/tarsh-thumbnail.jpg",
-      description:
-        "Tarsh is a multicuisine restaurant offering authentic dishes from four regions. We crafted a complete branding experience—from menu design to environmental branding and digital campaigns. With festive promotions, invites, and IPL-led marketing, we positioned Tarsh as a vibrant, memorable destination for food lovers."
-    },
-    {
-      name: "TMR Group",
-      img: "https://www.3dotsdesign.in/images/portfolio/tmr/thumbnail.jpg",
-      description:
-        "TMR Group, a leading plotting developer in Hyderabad, needed strong visibility in a competitive market. We created impactful corporate branding, including a standout Times of India ad, and strengthened their digital presence. Our strategic communication elevated the brand’s image and reinforced its position as a trusted name in land development."
-    },
-    {
-      name: "Grande View 7",
-      img: "https://www.3dotsdesign.in/images/portfolio/gv7/thumbnail.jpg",
-      description:
-        "Ambegaon was an overlooked locality, and GV7 needed a fresh identity for its 5th phase. We created the new brand “Kutumb”, supported by a strong multi-channel launch through print, outdoor ads, radio, site branding and digital touchpoints. The campaign successfully generated buzz and reshaped the project’s presence in the area."
-    },
-    {
-      name: "Life 3600",
-      img: "https://www.3dotsdesign.in/images/portfolio/life-360/sept18/main-thumbnail.gif",
-      description:
-        "Life 360 was positioned as a project offering truly holistic living. Our colourful, connectivity-focused ads and vibrant illustration style broke stereotypes and instantly grabbed attention. With strong print, outdoor and follow-up campaigns highlighting key amenities, the branding delivered big results—85 premium flats sold in just six months."
-    },
-    {
-      name: "Water's Squares",
-      img: "https://www.3dotsdesign.in/images/portfolio/waters-square/ws-thumbnail.gif",
-      description:
-        "Water’s Square combined office spaces, a hypermarket, retail and restaurants under one roof. To showcase these multiple offerings, we created a unified, smart communication approach. A four-page newspaper ad and strong outdoor branding highlighted every facet of the project, giving it clear visibility and a strong market presence."
-    },
-    {
-      name: "Dent Care",
-      img: "https://www.3dotsdesign.in/images/portfolio/dent-care/thumbnail.jpg",
-      description:
-        "For Dr. Disha Shah’s first clinic, we crafted a fresh, modern identity that reflected her advanced dental technology and contemporary approach. Through corporate branding, environmental design and digital promotions, we positioned the clinic as a standout, new-age destination for confident and reliable dental care."
-    },
-    {
-      name: "Femcity Hospitals",
-      img: "https://www.3dotsdesign.in/images/portfolio/femcity-hospitals/thumbnail.jpg",
-      description:
-        "Launching a women’s hospital in a crowded Hyderabad market required a distinct identity. We positioned Femcity as “A World of Happy Women” and built all branding around this idea. With a strategic two-phase launch—Women’s Day soft launch and a grand event—we created strong visibility and emotional connection with the audience."
-    },
-    {
-      name: "Women's Express",
-      img: "https://www.3dotsdesign.in/images/portfolio/we/thumbnail.jpg",
-      description:
-        "A new women’s apparel brand needed a smart global identity. We created “WE”—a short, memorable name inspired by “Women.” Its branding used a classy black-and-white palette with a touch of wine red, symbolising strength, clarity and passion, giving the brand a bold and contemporary persona."
-    },
-    {
-      name: "Atlante",
-      img: "https://www.3dotsdesign.in/images/portfolio/atlante/thumbnail.jpg",
-      description:
-        "Atlante, a residential project aimed at the IT crowd, was branded around its USP—“Measured to Perfection.” With subtle tech-inspired language and precise visuals, we created collaterals, outdoor ads and digital communication that reflected accuracy and detail. Miniature-themed brochure visuals further strengthened the project’s unique identity."
+        "Created playful branding around '51 acres' concept highlighting the Konkani lifestyle."
     }
   ];
 
   return (
-    <div className="w-full bg-white text-slate-800">
+    <div className="w-full bg-black text-white overflow-hidden">
 
-      {/* ---------- HEADER ---------- */}
-      <section className="max-w-7xl mx-auto px-5 pb-20 pt-24 md:pt-28">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide mb-6">
+      {/* BACKGROUND GLOW */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#d4a017]/10 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/10 blur-[120px] rounded-full"></div>
+
+      {/* HEADER */}
+      <section className="max-w-7xl mx-auto px-6 pt-28 pb-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-black uppercase mb-6">
             Our{" "}
-            <span className="text-[#d4a017] bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
-              Work Showcase
+            <span className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
+              Work
             </span>
           </h1>
 
-          <p className="text-slate-600 max-w-3xl mx-auto text-lg">
-            A curated selection of our best branding, digital, and creative campaigns crafted with precision and storytelling.
+          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
+            A showcase of high-impact campaigns and branding excellence.
           </p>
         </div>
 
-        {/* ---------- GRID ---------- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
+        {/* GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {items.map((item, i) => (
-            <article
+            <div
               key={i}
               onClick={() => setSelected(item)}
-              className="cursor-pointer rounded-2xl border border-slate-200 shadow-lg hover:shadow-2xl transition-all overflow-hidden bg-white max-w-[420px] mx-auto"
+              className="group cursor-pointer rounded-3xl overflow-hidden relative
+              border border-white/10 hover:border-[#d4a017]
+              transition-all duration-500 hover:-translate-y-2
+              shadow-lg hover:shadow-[0_0_40px_rgba(212,160,23,0.3)]"
             >
               <img
                 src={item.img}
-                className="w-full h-[330px] object-cover"
                 alt={item.name}
+                className="w-full h-[340px] object-cover group-hover:scale-110 transition duration-700"
               />
 
-              <div className="p-5">
-                <h3 className="text-xl font-bold">{item.name}</h3>
-              </div>
-            </article>
-          ))}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 
+              <div className="absolute bottom-6 left-6">
+                <h3 className="text-xl font-bold group-hover:text-[#d4a017]">
+                  {item.name}
+                </h3>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* ---------- MODAL ---------- */}
+      {/* MODAL */}
       {selected && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-6 z-50">
-          <div className="bg-white rounded-2xl max-w-3xl w-full p-7 relative">
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-xl flex items-center justify-center p-4 z-[60] overflow-y-auto">
+          <div className="max-w-4xl w-full rounded-3xl overflow-hidden border border-white/10 bg-black my-auto">
+
             <button
               onClick={() => setSelected(null)}
-              className="absolute top-3 right-4 text-3xl text-black"
+              className="absolute top-4 right-6 text-3xl text-white hover:text-[#d4a017] z-10"
             >
               ✕
             </button>
 
             <img
               src={selected.img}
-              className="w-full h-80 object-cover rounded-xl"
               alt={selected.name}
+              className="w-full h-64 md:h-80 object-cover"
             />
 
-            <h2 className="text-2xl font-bold mt-5">{selected.name}</h2>
-            <p className="text-slate-700 mt-3 leading-relaxed">{selected.description}</p>
+            <div className="p-8">
+              <h2 className="text-3xl font-black mb-4 uppercase">
+                {selected.name}
+              </h2>
+
+              <p className="text-gray-400 text-lg leading-relaxed">
+                {selected.description}
+              </p>
+            </div>
           </div>
         </div>
       )}
 
-      {/* ---------- CTA BUTTON ---------- */}
-      <section className="bg-yellow-50 py-14 text-center">
-        <h3 className="text-3xl font-bold mb-3">Ready to launch your next campaign?</h3>
+      {/* CTA */}
+      <section className="py-24 text-center">
+        <h3 className="text-3xl font-bold mb-6">
+          Ready to launch your next campaign?
+        </h3>
 
         <button
           onClick={() => navigate("/contact")}
-          className="px-8 py-3 bg-[#d4a017] text-white rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-500 transition"
+          className="px-12 py-5 rounded-full font-bold uppercase tracking-widest
+          bg-gradient-to-r from-[#d4a017] to-yellow-400 text-black
+          hover:scale-105 hover:shadow-[0_0_30px_rgba(212,160,23,0.6)]
+          transition-all duration-500"
         >
-          Book a Strategy Call
+          Book Strategy Call
         </button>
       </section>
 
