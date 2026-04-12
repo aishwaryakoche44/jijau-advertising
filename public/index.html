@@ -6,8 +6,11 @@
     <!-- Favicon -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 
-    <!-- Mobile Responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Best Mobile Responsive -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
 
     <!-- Theme Color -->
     <meta name="theme-color" content="#000000" />
@@ -15,45 +18,76 @@
     <!-- SEO Description -->
     <meta
       name="description"
-      content="Jijau Digital Advertising is a digital advertising agency that specializes in creating and managing online advertising campaigns for businesses of all sizes."
+      content="Jijau Digital Advertising is a digital advertising agency that specializes in creating and managing online advertising campaigns for businesses of all sizes. We help our clients reach their target audience effectively."
     />
 
-    <!-- Open Graph Meta Tags for WhatsApp / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Jijau Digital Advertising" />
+
     <meta
       property="og:description"
-      content="Jijau Digital Advertising helps businesses grow online through creative digital marketing and advertising services."
+      content="Jijau Digital Advertising is a digital advertising agency that specializes in creating and managing online advertising campaigns for businesses of all sizes. We help our clients reach their target audience effectively."
     />
-    <meta
-      property="og:image"
-      content="https://jijau-advertising-navy.vercel.app/logo192.png"
-    />
-    <meta
-      property="og:url"
-      content="https://jijau-advertising-navy.vercel.app/"
-    />
+
+    <!-- Image inside public/img folder -->
+    <meta property="og:image" content="%PUBLIC_URL%/img/logo192.png" />
+
+    <meta property="og:url" content="/" />
+
     <meta property="og:type" content="website" />
 
-    <!-- Twitter Preview -->
+    <meta property="og:site_name" content="Jijau Digital Advertising" />
+
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+
     <meta name="twitter:title" content="Jijau Digital Advertising" />
+
     <meta
       name="twitter:description"
-      content="Creative digital advertising solutions for your business growth."
-    />
-    <meta
-      name="twitter:image"
-      content="https://jijau-advertising-navy.vercel.app/logo192.png"
+      content="Creative digital advertising solutions for business growth."
     />
 
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/img/logo192.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/img/logo192.png" />
 
     <!-- Manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- Website Title -->
+    <!-- Title -->
     <title>Jijau Digital Advertising</title>
+
+    <!-- Mobile Fix -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      img,
+      video,
+      iframe {
+        max-width: 100%;
+        height: auto;
+      }
+
+      #root {
+        width: 100%;
+        overflow-x: hidden;
+      }
+    </style>
   </head>
 
   <body>
