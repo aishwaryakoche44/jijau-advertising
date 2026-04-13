@@ -1,157 +1,134 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Journey = () => {
   const steps = [
     {
       year: "2019",
       title: "Agency Foundation",
-      desc: "Jijau Advertising started as a small but ambitious political & strategic advertising agency."
+      desc: "Jijau Advertising started as a bold political and strategic advertising agency with a clear growth vision.",
     },
     {
       year: "2020",
       title: "First Major Campaign",
-      desc: "Handled our first full-scale constituency campaign with research and execution."
+      desc: "Successfully handled our first full constituency campaign with planning, field research, and execution.",
     },
     {
       year: "2021",
       title: "Brand Expansion",
-      desc: "Expanded into corporate digital marketing and branding services."
+      desc: "Expanded services into branding, digital marketing, and premium communication strategy.",
     },
     {
       year: "2022",
       title: "Ground + Digital Model",
-      desc: "Built a strong system combining booth-level data and performance marketing."
+      desc: "Built a winning model combining booth-level strategy with digital performance systems.",
     },
     {
       year: "2023",
       title: "Full-Service Agency",
-      desc: "Became a complete political & digital solutions agency."
+      desc: "Grew into a complete political, branding, and digital solutions agency.",
     },
     {
       year: "2024",
       title: "Leading Agency",
-      desc: "Recognized across Maharashtra for strategic excellence."
-    }
+      desc: "Recognized across Maharashtra for impactful campaigns and strategic excellence.",
+    },
   ];
 
   return (
-    <div className="w-full bg-black py-28 px-6 md:px-16 text-white overflow-hidden">
+    <section className="w-full bg-black text-white py-24 md:py-32 px-6 md:px-12 overflow-hidden relative">
 
-      {/* GLOW BACKGROUND */}
-      <div className="absolute left-0 top-0 w-96 h-96 bg-[#d4a017]/10 blur-[120px] rounded-full"></div>
-      <div className="absolute right-0 bottom-0 w-96 h-96 bg-yellow-400/10 blur-[120px] rounded-full"></div>
+      {/* GLOW */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#d4a017]/10 blur-[130px]" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/10 blur-[130px]" />
 
       {/* HEADER */}
       <div className="max-w-4xl mx-auto text-center mb-20 relative z-10">
-        <h2 className="text-5xl md:text-6xl font-black mb-6 uppercase">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="uppercase tracking-[0.35em] text-sm text-[#d4a017] font-bold mb-4"
+        >
+          Growth Timeline
+        </motion.p>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-6xl font-black uppercase leading-tight"
+        >
           Our{" "}
           <span className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
             Journey
           </span>
-        </h2>
+        </motion.h2>
 
-        <p className="text-gray-400 text-lg md:text-xl">
-          From startup to Maharashtra’s trusted strategic agency
+        <p className="text-gray-400 text-lg mt-6">
+          From startup vision to Maharashtra’s trusted strategic powerhouse
         </p>
-
-        <div className="w-20 h-1 bg-gradient-to-r from-[#d4a017] to-yellow-400 mx-auto mt-6 rounded-full"></div>
       </div>
 
       {/* TIMELINE */}
-      <div className="max-w-5xl mx-auto relative">
+      <div className="max-w-6xl mx-auto relative z-10">
 
-        {/* LINE */}
-        <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-[2px] h-full bg-gradient-to-b from-[#d4a017] to-yellow-400"></div>
+        {/* CENTER LINE */}
+        <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-[2px] h-full bg-gradient-to-b from-[#d4a017] via-yellow-400 to-transparent"></div>
 
-        <div className="space-y-16">
-          {steps.map((step, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-center">
+        <div className="space-y-14 md:space-y-20">
+          {steps.map((step, index) => {
+            const left = index % 2 === 0;
 
-              {index % 2 === 0 ? (
-                <>
-                  {/* LEFT CARD */}
-                  <div className="md:w-5/12 mb-6 md:mb-0 md:pr-10">
-                    <div className="p-8 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10
-                      hover:border-[#d4a017] hover:shadow-[0_0_30px_rgba(212,160,23,0.2)]
-                      transition-all duration-500">
-                      
-                      <h3 className="text-2xl font-bold mb-3 text-white">
-                        {step.title}
-                      </h3>
-
-                      <p className="text-gray-400">
-                        {step.desc}
-                      </p>
-                    </div>
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                className="grid md:grid-cols-12 gap-6 items-center"
+              >
+                {/* LEFT CARD */}
+                <div className={`md:col-span-5 ${left ? "order-1" : "order-3"}`}>
+                  <div className="glass rounded-3xl p-8 border border-white/10 hover:border-[#d4a017] hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_0_35px_rgba(212,160,23,0.2)]">
+                    <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
+                    <p className="text-gray-400 leading-relaxed">{step.desc}</p>
                   </div>
+                </div>
 
-                  {/* CENTER DOT */}
-                  <div className="md:w-2/12 flex justify-center mb-6 md:mb-0">
-                    <div className="relative">
-                      <div className="w-20 h-20 rounded-full flex items-center justify-center
-                        bg-gradient-to-br from-[#d4a017] to-yellow-400
-                        text-black font-bold text-xl shadow-[0_0_30px_rgba(212,160,23,0.6)]">
-                        {step.year}
-                      </div>
+                {/* CENTER YEAR */}
+                <div className="md:col-span-2 order-2 flex justify-center">
+                  <div className="relative">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4a017] to-yellow-400 text-black font-black text-lg flex items-center justify-center shadow-[0_0_30px_rgba(212,160,23,0.55)]">
+                      {step.year}
                     </div>
+                    <div className="absolute inset-0 rounded-full animate-ping bg-[#d4a017]/20"></div>
                   </div>
+                </div>
 
-                  <div className="md:w-5/12"></div>
-                </>
-              ) : (
-                <>
-                  <div className="md:w-5/12"></div>
-
-                  {/* CENTER DOT */}
-                  <div className="md:w-2/12 flex justify-center mb-6 md:mb-0">
-                    <div className="relative">
-                      <div className="w-20 h-20 rounded-full flex items-center justify-center
-                        bg-gradient-to-br from-[#d4a017] to-yellow-400
-                        text-black font-bold text-xl shadow-[0_0_30px_rgba(212,160,23,0.6)]">
-                        {step.year}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* RIGHT CARD */}
-                  <div className="md:w-5/12 md:pl-10">
-                    <div className="p-8 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10
-                      hover:border-[#d4a017] hover:shadow-[0_0_30px_rgba(212,160,23,0.2)]
-                      transition-all duration-500">
-                      
-                      <h3 className="text-2xl font-bold mb-3 text-white">
-                        {step.title}
-                      </h3>
-
-                      <p className="text-gray-400">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </div>
-                </>
-              )}
-            </div>
-          ))}
+                {/* RIGHT SPACE */}
+                <div className={`md:col-span-5 ${left ? "order-3" : "order-1"}`}></div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 
       {/* CTA */}
-      <div className="max-w-2xl mx-auto text-center mt-24">
+      <div className="text-center mt-24 relative z-10">
         <p className="text-gray-400 text-lg mb-8">
-          Ready to be part of our next success story?
+          Ready to become part of our next success story?
         </p>
 
         <a
           href="/contact"
-          className="inline-block px-12 py-5 rounded-full font-bold uppercase tracking-widest
-          bg-gradient-to-r from-[#d4a017] to-yellow-400 text-black
-          hover:scale-105 hover:shadow-[0_0_30px_rgba(212,160,23,0.6)]
-          transition-all duration-500"
+          className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-[#d4a017] to-yellow-400 text-black font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_25px_rgba(212,160,23,0.25)]"
         >
           Start Your Campaign
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 

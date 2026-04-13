@@ -2,54 +2,209 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom animations */
+/* ================================================= */
+/* GOOGLE FONT */
+/* ================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+/* ================================================= */
+/* BASE */
+/* ================================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ================================================= */
+/* SCROLLBAR */
+/* ================================================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4a017, #facc15);
+  border-radius: 999px;
+}
+
+/* ================================================= */
+/* TEXT SELECTION */
+/* ================================================= */
+::selection {
+  background: #d4a017;
+  color: #000;
+}
+
+/* ================================================= */
+/* FADE IN */
+/* ================================================= */
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(22px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float-left-right {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(14px); }
-  100% { transform: translateX(0); }
-}
-
-@keyframes float-right-left {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(-14px); }
-  100% { transform: translateX(0); }
 }
 
 .animate-fade-in {
-  animation: fade-in 1s ease-out;
+  animation: fade-in 1s ease-out forwards;
+}
+
+/* ================================================= */
+/* SLIDE UP */
+/* ================================================= */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-slide-up {
-  animation: slide-up 0.8s ease-out;
+  animation: slide-up 0.9s ease-out forwards;
+}
+
+/* ================================================= */
+/* FLOAT LEFT RIGHT */
+/* ================================================= */
+@keyframes float-left-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(14px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .float-left-right {
   animation: float-left-right 5s ease-in-out infinite;
 }
 
+/* ================================================= */
+/* FLOAT RIGHT LEFT */
+/* ================================================= */
+@keyframes float-right-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-14px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .float-right-left {
   animation: float-right-left 5s ease-in-out infinite;
 }
 
+/* ================================================= */
+/* FLOAT UP DOWN */
+/* ================================================= */
+@keyframes float-up-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float-up-down {
+  animation: float-up-down 6s ease-in-out infinite;
+}
+
+/* ================================================= */
+/* ZOOM SLOW */
+/* ================================================= */
+@keyframes zoom-slow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.zoom-slow {
+  animation: zoom-slow 8s ease-in-out infinite;
+}
+
+/* ================================================= */
+/* GOLD GLOW */
+/* ================================================= */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 160, 23, 0.25);
+}
+
+/* ================================================= */
+/* BUTTON HOVER */
+/* ================================================= */
+.btn-premium {
+  transition: all 0.3s ease;
+}
+
+.btn-premium:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 30px rgba(212, 160, 23, 0.35);
+}
+
+/* ================================================= */
+/* GLASS EFFECT */
+/* ================================================= */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}

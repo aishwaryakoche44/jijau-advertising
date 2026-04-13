@@ -1,12 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import Swal from "sweetalert2";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // 🔥 SweetAlert Popup
     Swal.fire({
       title: "🚀 Inquiry Sent!",
       text: "We’ll contact you within 24 hours.",
@@ -18,7 +23,6 @@ const Contact = () => {
       backdrop: "rgba(0,0,0,0.8)",
     });
 
-    // optional: reset form
     e.target.reset();
   };
 
@@ -26,7 +30,13 @@ const Contact = () => {
     <div className="w-full bg-black text-white pt-24">
 
       {/* ---- PAGE HEADER ---- */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <motion.section
+        className="max-w-7xl mx-auto px-6 py-16"
+        initial="hidden"
+        animate="visible"
+        variants={fadeUp}
+        transition={{ duration: 0.7 }}
+      >
         <p className="text-[#d4a017] font-bold uppercase tracking-widest mb-4">
           Get In Touch
         </p>
@@ -37,13 +47,19 @@ const Contact = () => {
             VICTORY TODAY
           </span>
         </h1>
-      </section>
+      </motion.section>
 
       {/* ---- CONTACT INFO + FORM ---- */}
       <section className="max-w-7xl mx-auto px-6 pb-24 grid lg:grid-cols-2 gap-20">
 
         {/* ---- LEFT SIDE INFO ---- */}
-        <div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          transition={{ duration: 0.6 }}
+        >
           <p className="text-xl text-gray-400 font-light mb-12 leading-relaxed">
             Connect with Maharashtra's most trusted political strategy team.
             Our command centers in Mumbai and Nashik are ready to deploy.
@@ -51,50 +67,45 @@ const Contact = () => {
 
           <div className="space-y-10">
 
-            <div className="flex gap-6 items-start">
-              <div className="w-14 h-14 bg-[#111] text-[#d4a017] rounded-full flex items-center justify-center">
-                <MapPin size={24} />
-              </div>
-              <div>
-                <h4 className="text-lg font-black uppercase">Headquarters</h4>
-                <p className="text-gray-500 mt-1">Mumbai • Nashik • Maharashtra</p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 items-start">
-              <div className="w-14 h-14 bg-[#111] text-[#d4a017] rounded-full flex items-center justify-center">
-                <Phone size={24} />
-              </div>
-              <div>
-                <h4 className="text-lg font-black uppercase">Direct Line</h4>
-                <p className="text-gray-500 mt-1">+91 93262 26888</p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 items-start">
-              <div className="w-14 h-14 bg-[#111] text-[#d4a017] rounded-full flex items-center justify-center">
-                <Mail size={24} />
-              </div>
-              <div>
-                <h4 className="text-lg font-black uppercase">Email Address</h4>
-                <p className="text-gray-500 mt-1">
-                  contact@jijauadvertising.in
-                </p>
-              </div>
-            </div>
+            {[
+              { icon: MapPin, title: "Headquarters", text: "Mumbai • Nashik • Maharashtra" },
+              { icon: Phone, title: "Direct Line", text: "+91 93262 26888" },
+              { icon: Mail, title: "Email Address", text: "contact@jijauadvertising.in" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                className="flex gap-6 items-start hover:translate-x-1 transition"
+                whileHover={{ x: 5 }}
+              >
+                <div className="w-14 h-14 bg-[#111] text-[#d4a017] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(212,160,23,0.1)]">
+                  <item.icon size={24} />
+                </div>
+                <div>
+                  <h4 className="text-lg font-black uppercase">{item.title}</h4>
+                  <p className="text-gray-500 mt-1">{item.text}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
 
           {/* WhatsApp CTA */}
           <a
             href="https://wa.me/919326226888"
-            className="mt-16 inline-flex items-center gap-4 bg-gradient-to-r from-[#25D366] to-green-400 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-all duration-300"
+            className="mt-16 inline-flex items-center gap-4 bg-gradient-to-r from-[#25D366] to-green-400 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-all duration-300 shadow-lg"
           >
             <MessageCircle size={24} /> Direct WhatsApp Strategy
           </a>
-        </div>
+        </motion.div>
 
         {/* ---- CONTACT FORM ---- */}
-        <div className="bg-[#0a0a0a] rounded-[40px] p-6 md:p-16 border border-white/10 shadow-xl">
+        <motion.div
+          className="bg-[#0a0a0a] rounded-[40px] p-6 md:p-16 border border-white/10 shadow-xl hover:shadow-[0_0_50px_rgba(212,160,23,0.1)] transition"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          transition={{ duration: 0.7 }}
+        >
           <form className="space-y-8" onSubmit={handleSubmit}>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -150,7 +161,7 @@ const Contact = () => {
               Send Inquiry <Send size={20} />
             </button>
           </form>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

@@ -1,7 +1,136 @@
-.App {
-  text-align: center;
+/* ================= GOOGLE FONT (OPTIONAL IF ALREADY IMPORTED) ================= */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+/* ================= BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ================= APP ROOT ================= */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: #000;
+  position: relative;
+}
+
+/* ================= PREMIUM SCROLLBAR ================= */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4a017, #facc15);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.9;
+}
+
+/* ================= TEXT SELECTION ================= */
+::selection {
+  background: #d4a017;
+  color: #000;
+}
+
+/* ================= IMAGE SETTINGS ================= */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ================= LINKS ================= */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================= BUTTON SMOOTHNESS ================= */
+button,
+a,
+input,
+textarea,
+select {
+  transition: all 0.3s ease;
+}
+
+/* ================= FOCUS STYLE ================= */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* ================= PREMIUM GLOW HELPERS ================= */
+.gold-glow {
+  box-shadow: 0 0 30px rgba(212, 160, 23, 0.25);
+}
+
+.soft-border {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* ================= HERO FLOATING ANIMATION ================= */
+.float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ================= FADE IN ================= */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= REACT DEFAULT LOGO (KEPT SAFE) ================= */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,26 +142,23 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  body {
+    font-size: 15px;
   }
 }
