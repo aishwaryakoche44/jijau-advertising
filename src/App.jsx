@@ -6,6 +6,7 @@ import Work from "./Pages/Work";
 import Footer from "./Footer";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
+import SolutionDetail from "./Pages/SolutionDetail";
 
 import {
   BrowserRouter,
@@ -48,6 +49,7 @@ const AppRoutes = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/work" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/solutions/:id" element={<SolutionDetail />} />
         </Routes>
       </PageWrapper>
 

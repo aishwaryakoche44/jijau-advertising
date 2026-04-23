@@ -15,7 +15,7 @@ const About = () => {
       <section className="w-full py-28 text-center relative overflow-hidden border-b border-white/10">
 
         {/* GLOW BACKGROUND */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#d4a017]/10 blur-[120px] rounded-full"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#fcab0f]/10 blur-[120px] rounded-full"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/10 blur-[120px] rounded-full"></div>
 
         <motion.div
@@ -27,7 +27,7 @@ const About = () => {
         >
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 uppercase">
             About{" "}
-            <span className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#fcab0f] to-yellow-400 bg-clip-text text-transparent">
               Jijau Advertising
             </span>
           </h1>
@@ -37,9 +37,9 @@ const About = () => {
           </p>
 
           <div className="mt-8 flex justify-center space-x-4">
-            <div className="w-16 h-1 bg-[#d4a017] rounded-full"></div>
+            <div className="w-16 h-1 bg-[#fcab0f] rounded-full"></div>
             <div className="w-8 h-1 bg-white/30 rounded-full"></div>
-            <div className="w-16 h-1 bg-[#d4a017] rounded-full"></div>
+            <div className="w-16 h-1 bg-[#fcab0f] rounded-full"></div>
           </div>
         </motion.div>
       </section>
@@ -60,10 +60,10 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-black mb-6">
               About Our Company
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#d4a017] to-yellow-400 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#fcab0f] to-yellow-400 mx-auto rounded-full"></div>
           </div>
 
-          <div className="rounded-3xl p-8 md:p-12 backdrop-blur-xl bg-white/5 border border-white/10 shadow-[0_0_40px_rgba(212,160,23,0.1)] hover:shadow-[0_0_60px_rgba(212,160,23,0.15)] transition-all">
+          <div className="rounded-3xl p-8 md:p-12 backdrop-blur-xl bg-white/5 border border-white/10 shadow-[0_0_40px_rgba(252,171,15,0.1)] hover:shadow-[0_0_60px_rgba(252,171,15,0.15)] transition-all">
 
             <p className="text-gray-300 leading-relaxed text-lg md:text-xl mb-8">
               Jijau Advertising is a full-service Political & Strategic Advertising Agency,
@@ -84,8 +84,8 @@ const About = () => {
             </div>
 
             {/* HIGHLIGHT CARD */}
-            <div className="bg-gradient-to-r from-[#d4a017]/10 to-yellow-400/10 border border-[#d4a017]/20 rounded-2xl p-6 mb-8 hover:scale-[1.01] transition">
-              <h3 className="text-2xl font-semibold mb-4 text-[#d4a017]">
+            <div className="bg-gradient-to-r from-[#fcab0f]/10 to-yellow-400/10 border border-[#fcab0f]/20 rounded-2xl p-6 mb-8 hover:scale-[1.01] transition">
+              <h3 className="text-2xl font-semibold mb-4 text-[#fcab0f]">
                 2024 Lok Sabha Elections Success
               </h3>
 
@@ -106,7 +106,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-10 mb-20">
 
           <motion.div
-            className="p-8 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover:border-[#d4a017] transition hover:scale-[1.02]"
+            className="p-8 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover:border-[#fcab0f] transition hover:scale-[1.02]"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -114,7 +114,7 @@ const About = () => {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
-            <div className="w-16 h-1 bg-[#d4a017] mb-6 rounded-full"></div>
+            <div className="w-16 h-1 bg-[#fcab0f] mb-6 rounded-full"></div>
 
             <p className="text-gray-400">
               To become Maharashtra's most trusted Political & Strategic Advertising Agency.
@@ -122,7 +122,7 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            className="p-8 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover:border-[#d4a017] transition hover:scale-[1.02]"
+            className="p-8 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover:border-[#fcab0f] transition hover:scale-[1.02]"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -130,7 +130,7 @@ const About = () => {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
-            <div className="w-16 h-1 bg-[#d4a017] mb-6 rounded-full"></div>
+            <div className="w-16 h-1 bg-[#fcab0f] mb-6 rounded-full"></div>
 
             <ul className="space-y-3 text-gray-400">
               <li>• India's leading political agency</li>
@@ -154,7 +154,7 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-black mb-6">
               Our Strengths
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#d4a017] to-yellow-400 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#fcab0f] to-yellow-400 mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -168,7 +168,7 @@ const About = () => {
             ].map((title, i) => (
               <motion.div
                 key={i}
-                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-[#d4a017] hover:shadow-[0_0_30px_rgba(212,160,23,0.2)] transition hover:scale-[1.03]"
+                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-[#fcab0f] hover:shadow-[0_0_30px_rgba(252,171,15,0.2)] transition hover:scale-[1.03]"
                 whileHover={{ y: -5 }}
               >
                 <h3 className="text-lg font-semibold text-white">
@@ -190,7 +190,7 @@ const About = () => {
         >
           <h2 className="text-4xl md:text-5xl font-black mb-8">
             Why Choose{" "}
-            <span className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#fcab0f] to-yellow-400 bg-clip-text text-transparent">
               Jijau Advertising?
             </span>
           </h2>
@@ -211,7 +211,7 @@ const About = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-[#d4a017] transition hover:scale-[1.02]"
+                className="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-[#fcab0f] transition hover:scale-[1.02]"
               >
                 {item}
               </div>

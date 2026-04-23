@@ -35,7 +35,7 @@ const Services = () => {
     <div className="w-full bg-black text-white pt-28 overflow-hidden">
 
       {/* GLOW BACKGROUND */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#d4a017]/10 blur-[120px] rounded-full"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#fcab0f]/10 blur-[120px] rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/10 blur-[120px] rounded-full"></div>
 
       {/* HEADER */}
@@ -46,13 +46,13 @@ const Services = () => {
         variants={fadeUp}
         transition={{ duration: 0.7 }}
       >
-        <p className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent font-bold uppercase tracking-widest mb-4">
+        <p className="bg-gradient-to-r from-[#fcab0f] to-yellow-400 bg-clip-text text-transparent font-bold uppercase tracking-widest mb-4">
           What We Master
         </p>
 
         <h1 className="text-5xl md:text-7xl font-black leading-tight uppercase">
           ELITE STRATEGIC <br />
-          <span className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#fcab0f] to-yellow-400 bg-clip-text text-transparent">
             CAPABILITIES
           </span>
         </h1>
@@ -74,7 +74,7 @@ const Services = () => {
 
             {/* SECTION TITLE */}
             <h2 className="text-3xl font-black mb-12 flex items-center gap-4">
-              <div className="w-12 h-[2px] bg-gradient-to-r from-[#d4a017] to-yellow-400"></div>
+              <div className="w-12 h-[2px] bg-gradient-to-r from-[#fcab0f] to-yellow-400"></div>
               <span className="text-white">{section.title}</span>
             </h2>
 
@@ -85,20 +85,20 @@ const Services = () => {
                 <motion.div
                   key={i}
                   className="group p-8 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10
-                  hover:border-[#d4a017] hover:shadow-[0_0_40px_rgba(212,160,23,0.25)]
+                  hover:border-[#fcab0f] hover:shadow-[0_0_40px_rgba(252,171,15,0.25)]
                   hover:-translate-y-2 transition-all duration-500"
                   whileHover={{ y: -6, scale: 1.02 }}
                 >
                   {/* ICON */}
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6
-                    bg-gradient-to-br from-[#d4a017] to-yellow-400 text-black
-                    group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(212,160,23,0.6)]
+                    bg-gradient-to-br from-[#fcab0f] to-yellow-400 text-black
+                    group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(252,171,15,0.6)]
                     transition-all duration-500">
                     <item.icon size={26} />
                   </div>
 
                   {/* TITLE */}
-                  <h3 className="text-xl font-black mb-3 group-hover:text-[#d4a017] transition">
+                  <h3 className="text-xl font-black mb-3 group-hover:text-[#fcab0f] transition">
                     {item.title}
                   </h3>
 
@@ -131,8 +131,8 @@ const Services = () => {
         <a
           href="/contact"
           className="inline-block px-12 py-5 rounded-full font-bold uppercase tracking-widest
-          bg-gradient-to-r from-[#d4a017] to-yellow-400 text-black
-          hover:scale-105 hover:shadow-[0_0_30px_rgba(212,160,23,0.6)]
+          bg-gradient-to-r from-[#fcab0f] to-yellow-400 text-black
+          hover:scale-105 hover:shadow-[0_0_30px_rgba(252,171,15,0.6)]
           transition-all duration-500"
         >
           Start Your Strategy

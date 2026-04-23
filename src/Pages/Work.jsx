@@ -98,7 +98,7 @@ const Work = () => {
         >
           <h1 className="text-5xl md:text-7xl font-black uppercase mb-6">
             Our{" "}
-            <span className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#fcab0f] to-yellow-400 bg-clip-text text-transparent">
               Work
             </span>
           </h1>
@@ -120,9 +120,9 @@ const Work = () => {
               transition={{ duration: 0.5, delay: i * 0.05 }}
               whileHover={{ y: -8 }}
               className="group cursor-pointer rounded-3xl overflow-hidden relative
-              border border-white/10 hover:border-[#d4a017]
+              border border-white/10 hover:border-[#fcab0f]
               transition-all duration-500
-              shadow-lg hover:shadow-[0_0_40px_rgba(212,160,23,0.3)]"
+              shadow-lg hover:shadow-[0_0_40px_rgba(252,171,15,0.3)]"
             >
               <img
                 src={item.img}
@@ -133,7 +133,7 @@ const Work = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 
               <div className="absolute bottom-6 left-6">
-                <h3 className="text-xl font-bold group-hover:text-[#d4a017] transition">
+                <h3 className="text-xl font-bold group-hover:text-[#fcab0f] transition">
                   {item.name}
                 </h3>
               </div>
@@ -160,7 +160,7 @@ const Work = () => {
             >
               <button
                 onClick={() => setSelected(null)}
-                className="absolute top-4 right-6 text-3xl text-white hover:text-[#d4a017] z-10"
+                className="absolute top-4 right-6 text-3xl text-white hover:text-[#fcab0f] z-10"
               >
                 ✕
               </button>
@@ -199,8 +199,8 @@ const Work = () => {
         <button
           onClick={() => navigate("/contact")}
           className="px-12 py-5 rounded-full font-bold uppercase tracking-widest
-          bg-gradient-to-r from-[#d4a017] to-yellow-400 text-black
-          hover:scale-105 hover:shadow-[0_0_30px_rgba(212,160,23,0.6)]
+          bg-gradient-to-r from-[#fcab0f] to-yellow-400 text-black
+          hover:scale-105 hover:shadow-[0_0_30px_rgba(252,171,15,0.6)]
           transition-all duration-500"
         >
           Book Strategy Call

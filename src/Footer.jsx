@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-black text-white pt-28 pb-12 relative overflow-hidden">
 
       {/* GOLD GLOW */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-[#d4a017]/10 blur-[120px]" />
+      <div className="absolute top-0 left-0 w-72 h-72 bg-[#fcab0f]/10 blur-[120px]" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-yellow-400/10 blur-[120px]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -33,7 +33,7 @@ const Footer = () => {
               />
 
               <h2 className="text-3xl font-black uppercase tracking-tight">
-                Jijau <span className="text-[#d4a017]">Advertising</span>
+                Jijau <span className="text-[#fcab0f]">Advertising</span>
               </h2>
             </div>
 
@@ -53,8 +53,8 @@ const Footer = () => {
                 whileHover={{ y: -4, scale: 1.08 }}
                 className="group"
               >
-                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-[#d4a017] transition-all duration-300">
-                  <FaFacebook className="text-gray-400 group-hover:text-[#d4a017]" />
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-[#fcab0f] transition-all duration-300">
+                  <FaFacebook className="text-gray-400 group-hover:text-[#fcab0f]" />
                 </div>
               </motion.a>
 
@@ -66,8 +66,8 @@ const Footer = () => {
                 whileHover={{ y: -4, scale: 1.08 }}
                 className="group"
               >
-                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-[#d4a017] transition-all duration-300">
-                  <FaInstagram className="text-gray-400 group-hover:text-[#d4a017]" />
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-[#fcab0f] transition-all duration-300">
+                  <FaInstagram className="text-gray-400 group-hover:text-[#fcab0f]" />
                 </div>
               </motion.a>
 
@@ -79,8 +79,8 @@ const Footer = () => {
                 whileHover={{ y: -4, scale: 1.08 }}
                 className="group"
               >
-                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-[#d4a017] transition-all duration-300">
-                  <FaTwitter className="text-gray-400 group-hover:text-[#d4a017]" />
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-[#fcab0f] transition-all duration-300">
+                  <FaTwitter className="text-gray-400 group-hover:text-[#fcab0f]" />
                 </div>
               </motion.a>
 
@@ -92,8 +92,8 @@ const Footer = () => {
                 whileHover={{ y: -4, scale: 1.08 }}
                 className="group"
               >
-                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-[#d4a017] transition-all duration-300">
-                  <FaLinkedinIn className="text-gray-400 group-hover:text-[#d4a017]" />
+                <div className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-[#fcab0f] transition-all duration-300">
+                  <FaLinkedinIn className="text-gray-400 group-hover:text-[#fcab0f]" />
                 </div>
               </motion.a>
 
@@ -111,7 +111,7 @@ const Footer = () => {
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase()}`}
-                    className="group hover:text-[#d4a017] flex items-center gap-2 transition-all duration-300"
+                    className="group hover:text-[#fcab0f] flex items-center gap-2 transition-all duration-300"
                   >
                     {item}
                     <ArrowUpRight

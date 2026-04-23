@@ -17,7 +17,7 @@ const Contact = () => {
       text: "We’ll contact you within 24 hours.",
       icon: "success",
       confirmButtonText: "Great!",
-      confirmButtonColor: "#d4a017",
+      confirmButtonColor: "#fcab0f",
       background: "#0a0a0a",
       color: "#fff",
       backdrop: "rgba(0,0,0,0.8)",
@@ -37,13 +37,13 @@ const Contact = () => {
         variants={fadeUp}
         transition={{ duration: 0.7 }}
       >
-        <p className="text-[#d4a017] font-bold uppercase tracking-widest mb-4">
+        <p className="text-[#fcab0f] font-bold uppercase tracking-widest mb-4">
           Get In Touch
         </p>
 
         <h1 className="text-5xl md:text-7xl font-black leading-tight">
           SECURE YOUR <br />
-          <span className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#fcab0f] to-yellow-400 bg-clip-text text-transparent">
             VICTORY TODAY
           </span>
         </h1>
@@ -77,7 +77,7 @@ const Contact = () => {
                 className="flex gap-6 items-start hover:translate-x-1 transition"
                 whileHover={{ x: 5 }}
               >
-                <div className="w-14 h-14 bg-[#111] text-[#d4a017] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(212,160,23,0.1)]">
+                <div className="w-14 h-14 bg-[#111] text-[#fcab0f] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(252,171,15,0.1)]">
                   <item.icon size={24} />
                 </div>
                 <div>
@@ -99,7 +99,7 @@ const Contact = () => {
 
         {/* ---- CONTACT FORM ---- */}
         <motion.div
-          className="bg-[#0a0a0a] rounded-[40px] p-6 md:p-16 border border-white/10 shadow-xl hover:shadow-[0_0_50px_rgba(212,160,23,0.1)] transition"
+          className="bg-[#0a0a0a] rounded-[40px] p-6 md:p-16 border border-white/10 shadow-xl hover:shadow-[0_0_50px_rgba(252,171,15,0.1)] transition"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -116,7 +116,7 @@ const Contact = () => {
                 <input
                   type="text"
                   required
-                  className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#d4a017] outline-none transition"
+                  className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#fcab0f] outline-none transition"
                 />
               </div>
 
@@ -127,7 +127,7 @@ const Contact = () => {
                 <input
                   type="email"
                   required
-                  className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#d4a017] outline-none transition"
+                  className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#fcab0f] outline-none transition"
                 />
               </div>
             </div>
@@ -136,7 +136,7 @@ const Contact = () => {
               <label className="text-xs font-black uppercase tracking-widest text-white/40">
                 Interested Service
               </label>
-              <select className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#d4a017] outline-none">
+              <select className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#fcab0f] outline-none">
                 <option className="text-black">Political Campaigning</option>
                 <option className="text-black">Digital Marketing</option>
                 <option className="text-black">War Room Setup</option>
@@ -150,13 +150,13 @@ const Contact = () => {
               <textarea
                 rows="4"
                 required
-                className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#d4a017] outline-none transition"
+                className="w-full bg-transparent p-4 border-b-2 border-white/10 focus:border-[#fcab0f] outline-none transition"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-5 bg-gradient-to-r from-[#d4a017] to-yellow-400 text-black font-black uppercase tracking-widest rounded-full hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3"
+              className="w-full py-5 bg-gradient-to-r from-[#fcab0f] to-yellow-400 text-black font-black uppercase tracking-widest rounded-full hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3"
             >
               Send Inquiry <Send size={20} />
             </button>

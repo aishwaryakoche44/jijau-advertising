@@ -48,7 +48,7 @@ const Journey = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="uppercase tracking-[0.35em] text-sm text-[#d4a017] font-bold mb-4"
+          className="uppercase tracking-[0.35em] text-sm text-[#fcab0f] font-bold mb-4"
         >
           Growth Timeline
         </motion.p>
@@ -60,7 +60,7 @@ const Journey = () => {
           className="text-4xl md:text-6xl font-black uppercase leading-tight"
         >
           Our{" "}
-          <span className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#fcab0f] to-yellow-400 bg-clip-text text-transparent">
             Journey
           </span>
         </motion.h2>
@@ -74,7 +74,7 @@ const Journey = () => {
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* CENTER LINE */}
-        <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-[2px] h-full bg-gradient-to-b from-[#d4a017] via-yellow-400 to-transparent"></div>
+        <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-[2px] h-full bg-gradient-to-b from-[#fcab0f] via-yellow-400 to-transparent"></div>
 
         <div className="space-y-14 md:space-y-20">
           {steps.map((step, index) => {
@@ -91,7 +91,7 @@ const Journey = () => {
               >
                 {/* LEFT CARD */}
                 <div className={`md:col-span-5 ${left ? "order-1" : "order-3"}`}>
-                  <div className="glass rounded-3xl p-8 border border-white/10 hover:border-[#d4a017] hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_0_35px_rgba(212,160,23,0.2)]">
+                  <div className="glass rounded-3xl p-8 border border-white/10 hover:border-[#fcab0f] hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_0_35px_rgba(252,171,15,0.2)]">
                     <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{step.desc}</p>
                   </div>
@@ -100,10 +100,10 @@ const Journey = () => {
                 {/* CENTER YEAR */}
                 <div className="md:col-span-2 order-2 flex justify-center">
                   <div className="relative">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4a017] to-yellow-400 text-black font-black text-lg flex items-center justify-center shadow-[0_0_30px_rgba(212,160,23,0.55)]">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#fcab0f] to-yellow-400 text-black font-black text-lg flex items-center justify-center shadow-[0_0_30px_rgba(252,171,15,0.55)]">
                       {step.year}
                     </div>
-                    <div className="absolute inset-0 rounded-full animate-ping bg-[#d4a017]/20"></div>
+                    <div className="absolute inset-0 rounded-full animate-ping bg-[#fcab0f]/20"></div>
                   </div>
                 </div>
 
@@ -123,7 +123,7 @@ const Journey = () => {
 
         <a
           href="/contact"
-          className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-[#d4a017] to-yellow-400 text-black font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_25px_rgba(212,160,23,0.25)]"
+          className="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-[#fcab0f] to-yellow-400 text-black font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_25px_rgba(252,171,15,0.25)]"
         >
           Start Your Campaign
         </a>

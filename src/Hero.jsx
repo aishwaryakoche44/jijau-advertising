@@ -37,7 +37,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/65"></div>
 
       {/* GOLD GLOW */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#d4a017]/20 blur-[130px]" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#fcab0f]/20 blur-[130px]" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/10 blur-[130px]" />
 
       {/* CONTENT */}
@@ -48,7 +48,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-[#d4a017] uppercase tracking-[0.4em] text-sm md:text-base font-bold mb-6"
+            className="text-[#fcab0f] uppercase tracking-[0.4em] text-sm md:text-base font-bold mb-6"
           >
             Political • Branding • Digital Growth
           </motion.p>
@@ -60,7 +60,7 @@ const Hero = () => {
             className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-tight"
           >
             We Build <br />
-            <span className="bg-gradient-to-r from-[#d4a017] to-yellow-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#fcab0f] to-yellow-400 bg-clip-text text-transparent">
               Winning Brands
             </span>
           </motion.h1>
@@ -83,14 +83,14 @@ const Hero = () => {
           >
             <a
               href="/contact"
-              className="px-10 py-4 rounded-full bg-gradient-to-r from-[#d4a017] to-yellow-400 text-black font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300"
+              className="px-10 py-4 rounded-full bg-gradient-to-r from-[#fcab0f] to-yellow-400 text-black font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300"
             >
               Start Strategy
             </a>
 
             <a
               href="/work"
-              className="px-10 py-4 rounded-full border border-white/20 text-white font-bold uppercase tracking-wider hover:border-[#d4a017] hover:text-[#d4a017] transition-all duration-300"
+              className="px-10 py-4 rounded-full border border-white/20 text-white font-bold uppercase tracking-wider hover:border-[#fcab0f] hover:text-[#fcab0f] transition-all duration-300"
             >
               View Work
             </a>
@@ -106,7 +106,7 @@ const Hero = () => {
             onClick={() => setCurrent(index)}
             className={`h-2 rounded-full transition-all duration-300 ${
               current === index
-                ? "w-10 bg-[#d4a017]"
+                ? "w-10 bg-[#fcab0f]"
                 : "w-2 bg-white/40"
             }`}
           />
