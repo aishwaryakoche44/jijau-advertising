@@ -1,9 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-import { 
-  Users, CheckCircle, Star, ArrowRight, 
-  Vote, Building2, Stethoscope, GraduationCap, Briefcase 
+import {
+  Users,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Vote,
+  Building2,
+  Stethoscope,
+  GraduationCap,
+  Briefcase,
+  Crown,
+  BarChart3,
+  Megaphone,
+  Rocket,
+  Handshake,
 } from "lucide-react";
 
 const fadeUp = {
@@ -32,36 +44,8 @@ const Home = () => {
     },
   ];
 
-  const heroImage =
+   const heroImage =
     "https://www.3dotsdesign.in/mockups/kwd/1.webp";
-
-  const team = [
-    {
-      name: "Rohit Patil",
-      role: "Chief Strategist",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
-    },
-    {
-      name: "Priya Deshmukh",
-      role: "Digital Head",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
-    },
-    {
-      name: "Aman Sharma",
-      role: "War Room Lead",
-      image: "https://randomuser.me/api/portraits/men/54.jpg",
-    },
-    {
-      name: "Sneha More",
-      role: "PR Director",
-      image: "https://randomuser.me/api/portraits/women/24.jpg",
-    },
-    {
-      name: "Yash Jadhav",
-      role: "Ground Manager",
-      image: "https://randomuser.me/api/portraits/men/76.jpg",
-    },
-  ];
 
   return (
     <div className="w-full bg-black text-white overflow-hidden">
@@ -95,11 +79,11 @@ const Home = () => {
 
           <div className="mt-10 flex justify-center lg:justify-start">
             <Link
-  to="/contact"
-  className="inline-flex items-center gap-3 px-8 md:px-10 py-4 md:py-5 rounded-full bg-gradient-to-r from-[#fcab0f] to-yellow-400 text-black font-bold uppercase hover:scale-105 transition-all duration-500 shadow-lg"
->
-  Partner With Us <ArrowRight size={20} />
-</Link>
+              to="/contact"
+              className="inline-flex items-center gap-3 px-8 md:px-10 py-4 md:py-5 rounded-full bg-gradient-to-r from-[#fcab0f] to-yellow-400 text-black font-bold uppercase hover:scale-105 transition-all duration-500 shadow-lg"
+            >
+              Partner With Us <ArrowRight size={20} />
+            </Link>
           </div>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-8 md:gap-12 mt-14 md:mt-16 border-t border-white/10 pt-10">
@@ -133,11 +117,10 @@ const Home = () => {
             className="w-full rounded-3xl shadow-[0_20px_60px_rgba(252,171,15,0.25)] object-cover hover:scale-[1.02] transition"
           />
         </motion.div>
-      </section>
-
+      </section> 
+      
       {/* ================= TRUST ================= */}
       <section className="py-24 md:py-32 border-y border-white/5 bg-[#050505] relative overflow-hidden">
-        {/* Subtle Background Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#fcab0f]/5 blur-[120px] rounded-full" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -177,8 +160,7 @@ const Home = () => {
                   {item.name}
                 </span>
               </motion.div>
-            )
-          )}
+            ))}
           </div>
         </div>
       </section>
@@ -186,34 +168,31 @@ const Home = () => {
       {/* ================= SERVICES ================= */}
       <section className="py-20 md:py-28 lg:py-36 px-5 sm:px-6 md:px-10">
         <div className="max-w-7xl mx-auto">
-
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-12 md:mb-16 lg:mb-20 leading-tight text-left">
             Elite <span className="text-[#fcab0f]">Solutions</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-            {solutions.map(
-              (item, i) => (
-                <motion.div
-                  key={i}
-                  onClick={() => navigate(`/solutions/${item.id}`)}
-                  className="p-8 sm:p-10 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(255,255,255,0.04)] hover:-translate-y-3 hover:border-[#fcab0f] hover:bg-white/10 hover:shadow-[0_15px_40px_rgba(252,171,15,0.25)] cursor-pointer transition group"
-                  whileHover={{ y: -6 }}
-                >
-                  <h3 className="text-2xl md:text-3xl font-bold mb-5">
-                    {item.title}
-                  </h3>
+            {solutions.map((item, i) => (
+              <motion.div
+                key={i}
+                onClick={() => navigate(`/solutions/${item.id}`)}
+                className="p-8 sm:p-10 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(255,255,255,0.04)] hover:-translate-y-3 hover:border-[#fcab0f] hover:bg-white/10 hover:shadow-[0_15px_40px_rgba(252,171,15,0.25)] cursor-pointer transition group"
+                whileHover={{ y: -6 }}
+              >
+                <h3 className="text-2xl md:text-3xl font-bold mb-5">
+                  {item.title}
+                </h3>
 
-                  <p className="text-gray-400 text-base md:text-lg">
-                    {item.desc}
-                  </p>
+                <p className="text-gray-400 text-base md:text-lg">
+                  {item.desc}
+                </p>
 
-                  <button className="mt-6 text-[#fcab0f] font-bold text-sm uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Learn More <ArrowRight size={16} />
-                  </button>
-                </motion.div>
-              )
-            )}
+                <button className="mt-6 text-[#fcab0f] font-bold text-sm uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">
+                  Learn More <ArrowRight size={16} />
+                </button>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -227,7 +206,6 @@ const Home = () => {
         variants={fadeUp}
       >
         <div className="max-w-7xl mx-auto text-center">
-
           <h2 className="text-4xl md:text-5xl font-black mb-10 md:mb-16 lg:mb-20">
             Why <span className="text-[#fcab0f]">Jijau</span>
           </h2>
@@ -253,13 +231,15 @@ const Home = () => {
       {/* ================= WORK ================= */}
       <section className="py-20 md:py-28 lg:py-36 px-6">
         <div className="max-w-7xl mx-auto">
-
           <div className="flex flex-col md:flex-row justify-between gap-6 md:items-center mb-10 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-black">
               Featured <span className="text-[#fcab0f]">Work</span>
             </h2>
 
-            <Link to="/work" className="text-[#fcab0f] font-semibold hover:underline">
+            <Link
+              to="/work"
+              className="text-[#fcab0f] font-semibold hover:underline"
+            >
               View All →
             </Link>
           </div>
@@ -284,7 +264,6 @@ const Home = () => {
 
       {/* ================= PROCESS ================= */}
       <section className="py-20 md:py-28 lg:py-36 bg-[#0a0a0a] text-center px-6">
-
         <h2 className="text-4xl md:text-5xl font-black mb-10 md:mb-16 lg:mb-20">
           Our <span className="text-[#fcab0f]">Process</span>
         </h2>
@@ -310,40 +289,53 @@ const Home = () => {
       <section className="py-24 bg-black overflow-hidden">
         <div className="text-center px-6 mb-14">
           <h2 className="text-4xl md:text-5xl font-black">
-            Meet Our <span className="text-[#fcab0f]">Experts</span>
+            Our Strategic <span className="text-[#fcab0f]">Force</span>
           </h2>
           <p className="text-gray-400 mt-4">
-            The brilliant minds behind successful campaigns.
+            Expert teams powering successful campaigns and brand growth.
           </p>
         </div>
 
-        <motion.div
-          className="flex gap-6 w-max px-6"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            repeat: Infinity,
-            duration: 22,
-            ease: "linear",
-          }}
-        >
-          {[...team, ...team].map((member, i) => (
-            <div
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {[
+            {
+              icon: Crown,
+              title: "Political Strategists",
+              desc: "Winning narratives and constituency planning.",
+            },
+            {
+              icon: BarChart3,
+              title: "Data Analysts",
+              desc: "Insights from surveys and voter behavior.",
+            },
+            {
+              icon: Megaphone,
+              title: "Media Experts",
+              desc: "Strong messaging across every platform.",
+            },
+            {
+              icon: Rocket,
+              title: "Digital Growth Team",
+              desc: "Ads, leads and measurable performance.",
+            },
+            {
+              icon: Handshake,
+              title: "Ground Force Managers",
+              desc: "Field execution and volunteer control.",
+            },
+          ].map((item, i) => (
+            <motion.div
               key={i}
-              className="min-w-[280px] bg-white/5 border border-white/10 rounded-3xl p-5"
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-[#fcab0f] hover:bg-white/10 transition text-center"
             >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-72 object-cover rounded-2xl"
-              />
-              <h3 className="text-xl font-bold mt-4">{member.name}</h3>
-              <p className="text-[#fcab0f] text-sm mt-1">{member.role}</p>
-            </div>
+              <item.icon className="mx-auto text-[#fcab0f] w-10 h-10 mb-5" />
+              <h3 className="font-bold text-lg mb-3">{item.title}</h3>
+              <p className="text-sm text-gray-400">{item.desc}</p>
+            </motion.div>
           ))}
-        </motion.div>
+        </div>
       </section>
-
-
     </div>
   );
 };
