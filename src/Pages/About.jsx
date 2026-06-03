@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Journey from "../Journey";
+import teamImg from "../image/web 4.jpg.jpeg";
+import eventImg from "../image/web 5.jpg.jpeg";
+import leadershipImg from "../image/web 3.jpg.jpeg";
+import officeImg from "../image/web 2.jpg.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -101,6 +105,123 @@ const About = () => {
             </p>
           </div>
         </motion.div>
+
+{/* INSIDE JIJAU */}
+<motion.div
+  className="mb-24"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={fadeUp}
+  transition={{ duration: 0.6 }}
+>
+  <div className="text-center mb-14">
+    <h2 className="text-4xl md:text-5xl font-black mb-6">
+      Inside Jijau Advertising
+    </h2>
+
+    <div className="w-24 h-1 bg-gradient-to-r from-[#fcab0f] to-yellow-400 mx-auto rounded-full"></div>
+
+    <p className="text-gray-400 max-w-3xl mx-auto mt-6">
+      A glimpse into the people, strategy, execution, and creativity that
+      power successful campaigns across Maharashtra.
+    </p>
+  </div>
+
+  <div className="space-y-20">
+
+    <div className="grid lg:grid-cols-2 gap-10 items-center">
+      <div className="overflow-hidden rounded-3xl border border-white/10">
+        <img
+          src={teamImg}
+          alt="Team"
+          className="w-full rounded-3xl hover:scale-105 transition duration-500"
+        />
+      </div>
+
+      <div>
+        <h3 className="text-3xl font-bold mb-4 text-[#fcab0f]">
+          The Team Behind Every Campaign
+        </h3>
+
+        <p className="text-gray-400 leading-relaxed">
+          Our team combines creativity, strategy, technology, and field
+          expertise to execute campaigns that create measurable impact.
+          Every project is driven by collaboration and dedication.
+        </p>
+      </div>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-10 items-center">
+      <div className="order-2 lg:order-1">
+        <h3 className="text-3xl font-bold mb-4 text-[#fcab0f]">
+          Ground-Level Execution
+        </h3>
+
+        <p className="text-gray-400 leading-relaxed">
+          From public rallies to digital activations, our team manages
+          campaigns on the ground with precision, ensuring smooth execution
+          and maximum reach.
+        </p>
+      </div>
+
+      <div className="order-1 lg:order-2 overflow-hidden rounded-3xl border border-white/10">
+        <img
+          src={eventImg}
+          alt="Execution"
+          className="w-full rounded-3xl hover:scale-105 transition duration-500"
+        />
+      </div>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-10 items-center">
+      <div className="overflow-hidden rounded-3xl border border-white/10">
+        <img
+          src={leadershipImg  }
+          alt="Leadership"
+          className="w-full rounded-3xl hover:scale-105 transition duration-500"
+        />
+      </div>
+
+      <div>
+        <h3 className="text-3xl font-bold mb-4 text-[#fcab0f]">
+          Leadership & Strategic Planning
+        </h3>
+
+        <p className="text-gray-400 leading-relaxed">
+          Strong planning and leadership help us transform ideas into
+          successful campaigns. Our strategic approach ensures that every
+          decision contributes to achieving campaign goals.
+        </p>
+      </div>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-10 items-center">
+      <div className="order-2 lg:order-1">
+        <h3 className="text-3xl font-bold mb-4 text-[#fcab0f]">
+          Creative Workspace
+        </h3>
+
+        <p className="text-gray-400 leading-relaxed">
+          Our office is where creativity meets technology. From content
+          production and branding to campaign analytics and digital
+          marketing, every solution is crafted with innovation.
+        </p>
+      </div>
+
+      <div className="order-1 lg:order-2 overflow-hidden rounded-3xl border border-white/10">
+        <img
+          src={officeImg}
+          alt="Workspace"
+          className="w-full rounded-3xl hover:scale-105 transition duration-500"
+        />
+      </div>
+    </div>
+
+  </div>
+</motion.div>
+
+
 
         {/* VISION + MISSION */}
         <div className="grid md:grid-cols-2 gap-10 mb-20">
