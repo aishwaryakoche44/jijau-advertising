@@ -36,7 +36,7 @@ const Journey = () => {
   ];
 
   return (
-    <section className="w-full bg-black text-white py-24 md:py-32 px-6 md:px-12 overflow-hidden relative">
+    <section className="w-full bg-black text-white px-6 md:px-12 overflow-hidden relative">
 
       {/* GLOW */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-[#d4a017]/10 blur-[130px]" />
