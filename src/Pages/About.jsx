@@ -152,8 +152,38 @@ const About = () => {
       </div>
     </div>
 
-    <div className="grid lg:grid-cols-2 gap-10 items-center">
+<div className="grid lg:grid-cols-2 gap-10 items-center">
       <div className="order-2 lg:order-1">
+        <h3 className="text-3xl font-bold mb-4 text-[#fcab0f]">
+          Leadership & Strategic Planning
+        </h3>
+
+        <p className="text-gray-400 leading-relaxed">
+         Strong planning and leadership help us transform ideas into
+          successful campaigns. Our strategic approach ensures that every
+          decision contributes to achieving campaign goals.
+        </p>
+      </div>
+
+      <div className="order-1 lg:order-2 overflow-hidden rounded-3xl border border-white/10">
+        <img
+          src={leadershipImg}
+          alt="Execution"
+          className="w-full rounded-3xl hover:scale-105 transition duration-500"
+        />
+      </div>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-10 items-center">
+      <div className="overflow-hidden rounded-3xl border border-white/10">
+        <img
+          src={eventImg  }
+          alt="Leadership"
+          className="w-full rounded-3xl hover:scale-105 transition duration-500"
+        />
+      </div>
+
+      <div>
         <h3 className="text-3xl font-bold mb-4 text-[#fcab0f]">
           Ground-Level Execution
         </h3>
@@ -164,17 +194,11 @@ const About = () => {
           and maximum reach.
         </p>
       </div>
-
-      <div className="order-1 lg:order-2 overflow-hidden rounded-3xl border border-white/10">
-        <img
-          src={eventImg}
-          alt="Execution"
-          className="w-full rounded-3xl hover:scale-105 transition duration-500"
-        />
-      </div>
     </div>
 
-    <div className="grid lg:grid-cols-2 gap-10 items-center">
+    
+
+    {/* <div className="grid lg:grid-cols-2 gap-10 items-center">
       <div className="overflow-hidden rounded-3xl border border-white/10">
         <img
           src={leadershipImg  }
@@ -194,9 +218,9 @@ const About = () => {
           decision contributes to achieving campaign goals.
         </p>
       </div>
-    </div>
+    </div> */}
 
-    <div className="grid lg:grid-cols-2 gap-10 items-center">
+    {/* <div className="grid lg:grid-cols-2 gap-10 items-center">
       <div className="order-2 lg:order-1">
         <h3 className="text-3xl font-bold mb-4 text-[#fcab0f]">
           Creative Workspace
@@ -216,7 +240,7 @@ const About = () => {
           className="w-full rounded-3xl hover:scale-105 transition duration-500"
         />
       </div>
-    </div>
+    </div> */}
 
   </div>
 </motion.div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
+import heroOffice from "../image/image.png";
 import {
   Users,
   CheckCircle,
@@ -45,80 +46,94 @@ const Home = () => {
   ];
 
    const heroImage =
-    "https://www.3dotsdesign.in/mockups/kwd/1.webp";
+    heroOffice;
 
   return (
     <div className="w-full bg-black text-white overflow-hidden">
 
-      {/* ================= HERO ================= */}
-      <section className="w-full px-6 md:px-10 lg:px-16 py-24 md:py-32 lg:py-44 flex flex-col-reverse lg:flex-row items-center justify-between gap-14 lg:gap-20 relative">
+    {/* ================= HERO ================= */}
+<section className="w-full px-6 md:px-10 lg:px-16 py-20 md:py-28 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-16 relative">
 
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#fcab0f]/10 blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/10 blur-[120px]" />
+  <div className="absolute top-0 left-0 w-96 h-96 bg-[#fcab0f]/10 blur-[120px]" />
+  <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/10 blur-[120px]" />
 
-        <motion.div
-          className="lg:w-1/2 relative z-10"
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase leading-tight mb-8 text-center lg:text-left">
-            Influence <br />
-            <span className="bg-gradient-to-r from-[#fcab0f] to-yellow-400 bg-clip-text text-transparent">
-              Excellence
-            </span>
-            <br />
-            That Wins
-          </h1>
+  {/* LEFT CONTENT */}
+  <motion.div
+    className="lg:w-1/2 relative z-10 text-center lg:text-left"
+    initial="hidden"
+    animate="visible"
+    variants={fadeUp}
+    transition={{ duration: 0.8 }}
+  >
+    <p className="text-[#fcab0f] uppercase tracking-[0.25em] text-sm font-semibold mb-4">
+      Political • Digital • Branding
+    </p>
 
-          <p className="text-gray-400 text-base md:text-lg max-w-xl leading-relaxed text-center lg:text-left mx-auto lg:mx-0">
-            Maharashtra's elite strategic agency for political dominance and
-            digital brand leadership.
-          </p>
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
+      Political &
+      <span className="text-[#fcab0f]"> Digital</span>
+      <br />
+      Growth Partners
+    </h1>
 
-          <div className="mt-10 flex justify-center lg:justify-start">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 px-8 md:px-10 py-4 md:py-5 rounded-full bg-gradient-to-r from-[#fcab0f] to-yellow-400 text-black font-bold uppercase hover:scale-105 transition-all duration-500 shadow-lg"
-            >
-              Partner With Us <ArrowRight size={20} />
-            </Link>
-          </div>
+    <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+      Building winning political campaigns, powerful digital presence,
+      and strategic brand growth across Maharashtra.
+    </p>
 
-          <div className="flex flex-wrap justify-center lg:justify-start gap-8 md:gap-12 mt-14 md:mt-16 border-t border-white/10 pt-10">
-            {[
-              { icon: Users, value: "50+", label: "Campaigns" },
-              { icon: CheckCircle, value: "95%", label: "Success" },
-              { icon: Star, value: "5+", label: "Years" },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                className="text-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <item.icon className="text-[#fcab0f] mx-auto" />
-                <p className="text-2xl font-black">{item.value}</p>
-                <p className="text-xs text-gray-500 uppercase">{item.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+    <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-4">
+      <Link
+        to="/contact"
+        className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#fcab0f] text-black font-bold"
+      >
+        Partner With Us
+        <ArrowRight size={18} />
+      </Link>
 
-        <motion.div
-          className="lg:w-1/2"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <img
-            src={heroImage}
-            alt="Campaign Work"
-            className="w-full rounded-3xl shadow-[0_20px_60px_rgba(252,171,15,0.25)] object-cover hover:scale-[1.02] transition"
-          />
-        </motion.div>
-      </section> 
-      
+      <Link
+        to="/work"
+        className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/20"
+      >
+        View Work
+      </Link>
+    </div>
+
+    <div className="flex justify-center lg:justify-start gap-10 mt-12">
+      <div>
+        <h3 className="text-3xl font-black text-[#fcab0f]">50+</h3>
+        <p className="text-gray-500 text-sm uppercase">Campaigns</p>
+      </div>
+
+      <div>
+        <h3 className="text-3xl font-black text-[#fcab0f]">95%</h3>
+        <p className="text-gray-500 text-sm uppercase">Success</p>
+      </div>
+
+      <div>
+        <h3 className="text-3xl font-black text-[#fcab0f]">5+</h3>
+        <p className="text-gray-500 text-sm uppercase">Years</p>
+      </div>
+    </div>
+  </motion.div>
+
+  {/* RIGHT IMAGE */}
+  <motion.div
+    className="lg:w-1/2 relative"
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8 }}
+  >
+    <div className="relative rounded-[48px] sm:rounded-[64px] overflow-hidden bg-[#070707] shadow-[0_35px_90px_rgba(0,0,0,0.45)]">
+      <img
+        src={heroImage}
+        alt="Jijau Advertising"
+        className="w-full max-h-[560px] sm:max-h-[620px] md:max-h-[720px] object-contain"
+      />
+      <div className="absolute left-1/2 bottom-4 -translate-x-1/2 h-8 w-3/4 rounded-full bg-black/30 blur-2xl" />
+    </div>
+  </motion.div>
+
+</section>
       {/* ================= TRUST ================= */}
       <section className="py-24 md:py-32 border-y border-white/5 bg-[#050505] relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#fcab0f]/5 blur-[120px] rounded-full" />
