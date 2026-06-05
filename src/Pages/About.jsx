@@ -16,7 +16,7 @@ const About = () => {
     <div className="bg-black text-white w-full min-h-screen overflow-hidden">
 
       {/* HERO */}
-      <section className="w-full py-28 text-center relative overflow-hidden border-b border-white/10">
+      <section className="w-full py-20 text-center relative overflow-hidden border-b border-white/10">
 
         {/* GLOW BACKGROUND */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#fcab0f]/10 blur-[120px] rounded-full"></div>
@@ -36,11 +36,11 @@ const About = () => {
             </span>
           </h1>
 
-          <p className="mt-6 max-w-3xl mx-auto text-gray-400 text-xl md:text-2xl font-light">
+          <p className="mt-4 max-w-3xl mx-auto text-gray-400 text-xl md:text-2xl font-light">
             Political • Digital • Strategic • Creative Excellence
           </p>
 
-          <div className="mt-8 flex justify-center space-x-4">
+          <div className="mt-6 flex justify-center space-x-4">
             <div className="w-16 h-1 bg-[#fcab0f] rounded-full"></div>
             <div className="w-8 h-1 bg-white/30 rounded-full"></div>
             <div className="w-16 h-1 bg-[#fcab0f] rounded-full"></div>
@@ -49,7 +49,7 @@ const About = () => {
       </section>
 
       {/* MAIN */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section className="max-w-7xl mx-auto px-6 pt-0 pb-6">
 
         {/* ABOUT COMPANY */}
         <motion.div
@@ -325,44 +325,44 @@ const About = () => {
         </motion.div>
 
         {/* WHY CHOOSE */}
-        <motion.div
-          className="mb-20 text-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-black mb-8">
-            Why Choose{" "}
-            <span className="bg-gradient-to-r from-[#fcab0f] to-yellow-400 bg-clip-text text-transparent">
-              Jijau Advertising?
-            </span>
-          </h2>
+<motion.div
+  className="mb-20 text-center"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={fadeUp}
+  transition={{ duration: 0.6 }}
+>
+  <h2 className="text-4xl md:text-5xl font-black mb-8">
+    Why Choose{" "}
+    <span className="bg-gradient-to-r from-[#fcab0f] to-yellow-400 bg-clip-text text-transparent">
+      Jijau Advertising?
+    </span>
+  </h2>
 
-          <p className="text-gray-400 max-w-3xl mx-auto mb-12">
-            Not just an agency — a strategic growth engine powered by data,
-            culture, and execution.
-          </p>
+  <p className="text-gray-400 max-w-3xl mx-auto mb-12">
+    Not just an agency — a strategic growth engine powered by data,
+    culture, and execution.
+  </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              "Political + Digital Expertise",
-              "Ground Knowledge",
-              "Custom Campaign Strategy",
-              "Transparent Reporting",
-              "Result Focused",
-              "War Room Execution",
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-[#fcab0f] transition hover:scale-[1.02]"
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-        </motion.div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {[
+      "Political + Digital Expertise",
+      "Ground Knowledge",
+      "Custom Campaign Strategy",
+      "Transparent Reporting",
+      "Result Focused",
+      "War Room Execution",
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-[#fcab0f] transition hover:scale-[1.02] text-lg font-medium text-white"
+      >
+        {item}
+      </div>
+    ))}
+  </div>
+</motion.div>
 
       </section>
 
