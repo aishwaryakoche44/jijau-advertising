@@ -19,6 +19,22 @@ import {
   Handshake,
 } from "lucide-react";
 
+import Img1 from "../image/Img1.jpeg";
+import Img2 from "../image/Img2.jpeg";
+import Img3 from "../image/Img3.jpeg";
+import Img4 from "../image/Img4.jpeg";
+import Img5 from "../image/Img5.jpeg";
+import Img6 from "../image/Img6.jpeg";
+import Img7 from "../image/Img7.jpeg";
+import Img8 from "../image/Img8.jpeg";
+import Img9 from "../image/Img9.jpeg";
+import Img10 from "../image/Img10.jpeg";
+import Img11 from "../image/Img11.jpeg";
+import Img12 from "../image/Img12.jpeg";
+import Img14 from "../image/Img14.jpeg";
+import Img15 from "../image/Img15.jpeg";
+import Img16 from "../image/Img16.jpeg";
+
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
@@ -241,39 +257,111 @@ const Home = () => {
     </div>
   </div>
 </motion.section>
-    {/* ================= WORK ================= */}
+   {/* ================= WORK ================= */}
 <section className="py-10 md:py-12 px-6">
   <div className="max-w-7xl mx-auto">
+
     <div className="flex flex-col md:flex-row justify-between gap-4 md:items-center mb-8 md:mb-10">
-      <h2 className="text-4xl md:text-5xl font-black">
-        Featured <span className="text-[#fcab0f]">Work</span>
+      <h2 className="text-4xl md:text-5xl font-black uppercase">
+        Proven <span className="text-[#fcab0f]">Results</span>
       </h2>
 
-      <Link
-        to="/work"
-        className="text-[#fcab0f] font-semibold hover:underline"
-      >
+      <Link to="/work" className="text-[#fcab0f] font-semibold hover:underline">
         View All →
       </Link>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {[
-        "https://www.3dotsdesign.in/mockups/bookstation/RGT2J09.webp",
-        "https://www.3dotsdesign.in/mockups/vatashi/Newspaper%20Mock-Up%20Set-%20by%20PuneDesign.webp",
-        "https://www.3dotsdesign.in/mockups/kwd/1.webp",
-      ].map((img, i) => (
-        <motion.img
-          key={i}
-          src={img}
-          alt="Work"
-          className="rounded-2xl h-72 w-full object-cover hover:scale-105 transition duration-500"
-          whileHover={{ scale: 1.05 }}
-        />
-      ))}
+
+    {/* Moving Images */}
+    <div className="relative w-full overflow-x-hidden">
+
+      <motion.div
+        className="flex gap-8"
+        animate={{
+          x: ["0%", "-100%"],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+
+        {[
+          Img1, // white
+          Img3, // black
+          Img2, // white
+          Img6, // black
+          Img5, // white
+          Img4, // black
+          Img7, // white
+          Img9, // black
+          Img8, // white
+          Img11, // black
+          Img10, // white
+          Img12, // white
+          Img15, // white
+          Img14, // white
+          Img16, // white
+
+
+          // duplicate for infinite loop
+          Img1, // white
+          Img3, // black
+          Img2, // white
+          Img6, // black
+          Img5, // white
+          Img4, // black
+          Img7, // white
+          Img9, // black
+          Img8, // white
+          Img11, // black
+          Img10, // white
+          Img12, // white
+          Img15, // white
+          Img14, // white
+          Img16, // white
+
+        ].map((img, i) => (
+
+          <motion.div
+            key={i}
+            whileHover={{scale:1.05}}
+            className="
+              min-w-[320px]
+              md:min-w-[380px]
+              h-64
+              md:h-72
+              rounded-2xl
+              overflow-hidden
+              shadow-lg
+            "
+          >
+
+            <img
+              src={img}
+              alt="Featured Work"
+              className="
+                w-full
+                h-full
+                object-cover
+                hover:brightness-110
+                transition
+                duration-500
+              "
+            />
+
+          </motion.div>
+
+        ))}
+
+      </motion.div>
+
     </div>
+
   </div>
-</section>{/* ================= PROCESS ================= */}
+</section>
+{/* ================= PROCESS ================= */}
 <section className="py-10 md:py-12 bg-[#0a0a0a] text-center px-6">
   <h2 className="text-4xl md:text-5xl font-black mb-8 md:mb-10">
     Our <span className="text-[#fcab0f]">Process</span>
