@@ -2,82 +2,103 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
+import Img1 from "../image/Img1.jpeg";
+import Img2 from "../image/Img2.jpeg";
+import Img3 from "../image/Img3.jpeg";
+import Img4 from "../image/Img4.jpeg";
+import Img5 from "../image/Img5.jpeg";
+import Img6 from "../image/Img6.jpeg";
+import Img7 from "../image/Img7.jpeg";
+import Img8 from "../image/Img8.jpeg";
+import Img9 from "../image/Img9.jpeg";
+import Img10 from "../image/Img10.jpeg";
+import Img11 from "../image/Img11.jpeg";
+import Img12 from "../image/Img12.jpeg";
+import Img14 from "../image/Img14.jpeg";
+import Img15 from "../image/Img15.jpeg";
+import Img16 from "../image/Img16.jpeg";
+
 const Work = () => {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
 
   const items = [
     {
-      name: "Vatashi",
-      img: "https://www.3dotsdesign.in/mockups/vatashi/Newspaper%20Mock-Up%20Set-%20by%20PuneDesign.webp",
-      description:
-        "Vatashi was introduced during the pandemic to meet the rising need for affordable, high-efficiency filtration devices. Created by Pune Polymers, the brand focuses on helping people breathe pure air in the automotive segment. we successfully built its market presence and strengthened its identity."
+      name: "Niphad Vidhansabha Campaign",
+      img: Img1,
+      description: "A comprehensive political campaign for Hon. MLA Dilipkaka Bankar that reshaped public discourse and secured a landmark victory through strategic on-ground and digital integration."
     },
     {
-      name: "Paranjape Schemes Construction Ltd.",
-      img: "https://www.3dotsdesign.in/mockups/genj/PSCL-ATHASHRI-6.webp",
-      description:
-        "Paranjape Schemes is one of Pune’s most trusted real estate brands, with 190+ landmark projects across residential and commercial spaces. we strengthened their market presence by handling 30+ projects through strategic creativity across print, outdoor, digital, and social media communication."
+      name: "Niphad Election 2024",
+      img: Img3,
+      description: "Executed a multi-platform digital marketing strategy for the Niphad 2024 election, enhancing online presence and driving significant voter outreach for the Niphad Assembly campaign."
     },
     {
-      name: "Mangalam Landmarks",
-      img: "https://www.3dotsdesign.in/mockups/miraya/Newspaper-Mock-Up-Set--by-PuneDesign.webp",
-      description:
-        "Mangalam Landmarks is a leading Pune developer with a strong commercial, residential, and industrial portfolio. we crafted complete 360° communication for the brand, using creative strategy to highlight the ‘Mangalam Way of Life’ across print, outdoor, digital, and social media platforms."
+      name: "Malegaon Election 2024",
+      img: Img6,
+      description: "Designed and executed a high-visibility campaign for the Malegaon 2024 election, managing all logistics, media, and public engagement for a seamless and impactful result."
     },
     {
-      name: "KWALITY WORLD DEVELOPERS",
-      img: "https://www.3dotsdesign.in/mockups/kwd/1.webp",
-      description:
-        "Vrindavan Heights by Kwality Developers focuses on delivering spacious, affordable homes in prime Magarpatta—addressing the city’s rising small-home issue. At 3 Dots Design Pvt. Ltd., we crafted a curiosity-driven campaign that highlighted real value and smart living through integrated communication."
+      name: "Malegaon Vidhansabha Campaign",
+      img: Img2,
+      description: "Developed a powerful brand identity for Hon. MLA Dadaji Bhuse, resulting in a 40% increase in voter engagement and record-breaking rally attendance."
+    },
+     {
+      name: "Pachora Vidhansabha Campaign",
+      img: Img5,
+      description: "Launched a disruptive campaign in the Pachora Vidhansabha race for Hon. MLA Kishorappa Patil with a bold identity and a digital-first approach, capturing a significant voter share."
     },
     {
-      name: "EXER ENERGY",
-      img: "https://www.3dotsdesign.in/images/portfolio/exer/website.jpg",
-      description:
-        "EXER ENERGY entered the rising e-scooter market with fast innovation and stylish design. We created the concept “The Sleek God,” positioning it as a bold, modern riding experience."
+      name: "Pachora Election 2024",
+      img: Img4,
+      description: "Crafted a compelling narrative for Hon. MLA Kishorappa Patil in the Pachora 2024 election, strengthening their public image and improving stakeholder engagement."
     },
     {
-      name: "BOOKSTATION",
-      img: "https://www.3dotsdesign.in/mockups/bookstation/RGT2J09.webp",
-      description:
-        "Bookstation connects Pune bookstores with readers through fast delivery. We built a witty hyperlocal campaign using Pune culture and language to create strong brand recall."
+      name: "Vidhansabha Election 2024",
+      img: Img9,
+      description: "Orchestrated a grassroots movement for the Nashik Assembly 2024 elections, mobilizing community support and influencing policy change through a powerful, resonant campaign."
+    },
+    
+    {
+      name: "Nashik Vidhansabha Campaign",
+      img: Img7,
+      description: "Built a complete visual identity and online platform for Hon. MLA Devyani Pharande, establishing them as a trusted name in a competitive political space in Nashik."
+    },
+   
+    {
+      name: "Nashik Loksabha Campaign",
+      img: Img8,
+      description: "Managed a crisis communication strategy for Hon. MP Rajabhau Waje, successfully navigating public perception and restoring voter trust through strategic messaging."
     },
     {
-      name: "VIVEDAA ORGANIX",
-      img: "https://www.3dotsdesign.in/mockups/vivedaa/1234.webp",
-      description:
-        "Vivedaa Organix was positioned as Herbal Luxury Hair Oil with elegant branding and premium visual identity to stand out in a crowded market."
+      name: "Loksabha Election 2024",
+      img: Img11,
+      description: "Created a full-scale branding and awareness campaign for the Nashik Loksabha 2024 election, leading to a significant increase in positive media mentions and voter turnout."
     },
     {
-      name: "Jehangir Hospital",
-      img: "https://www.3dotsdesign.in/mockups/jehangir/5.jpg",
-      description:
-        "We led campaigns for key hospital units with clear communication and strong storytelling, improving visibility and engagement."
+      name: "Dhule Loksabha Campaign",
+      img: Img10,
+      description: "Developed a data-driven voter outreach program for Hon. MP Shobhatai Bachhav that identified and engaged key demographics, playing a crucial role in a tightly contested election."
     },
     {
-      name: "Happynest",
-      img: "https://www.3dotsdesign.in/images/portfolio/happynest/print-media/01.jpg",
-      description:
-        "We created a warm and relatable identity for affordable housing, backed by impactful TVCs and outdoor campaigns."
+      name: "The Thasa - Brand Campaign",
+      img: Img12,
+      description: "Produced a series of viral video content and a full branding package for 'The Thasa', a hand-crafted leather products company, dramatically increasing their social media reach."
     },
     {
-      name: "7 Plumeria Drive",
-      img: "https://www.3dotsdesign.in/images/portfolio/7pd/thumbnail.jpg",
-      description:
-        "Luxury project branding focused on the number '7' to create a premium and memorable identity."
+      name: "Dr. Priyanka's Swan Skinfinity",
+      img: Img15,
+      description: "Launched a branding and awareness campaign for Dr. Priyanka's Swan Skinfinity clinic, promoting their skin, hair, and laser services to a wider audience."
     },
     {
-      name: "Pushpa International School",
-      img: "https://www.3dotsdesign.in/images/portfolio/pis/pis-thumbnail.jpg",
-      description:
-        "Built a complete identity and campaign that resulted in full admissions within 3 months."
+      name: "B.G.P. Sonawane Jr. College",
+      img: Img14,
+      description: "Led the public relations and branding campaign for B.G.P. Sonawane Jr. College, ensuring positive media coverage and widespread community support for their new programs."
     },
     {
-      name: "KONKAN TRAILS",
-      img: "https://www.3dotsdesign.in/mockups/konkan-trails/R5A6T7P.webp",
-      description:
-        "Created playful branding around '51 acres' concept highlighting the Konkani lifestyle."
+      name: "Rajmudra Induction",
+      img: Img16,
+      description: "Provided end-to-end strategic communication for Rajmudra Induction, securing their brand identity and achieving early market adoption in the industrial sector."
     }
   ];
 
@@ -109,7 +130,7 @@ const Work = () => {
         </motion.div>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {items.map((item, i) => (
             <motion.div
               key={i}
@@ -119,7 +140,7 @@ const Work = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
               whileHover={{ y: -8 }}
-              className="group cursor-pointer rounded-3xl overflow-hidden relative
+              className="group cursor-pointer rounded-2xl overflow-hidden relative
               border border-white/10 hover:border-[#fcab0f]
               transition-all duration-500
               shadow-lg hover:shadow-[0_0_40px_rgba(252,171,15,0.3)]"
@@ -127,16 +148,10 @@ const Work = () => {
               <img
                 src={item.img}
                 alt={item.name}
-                className="w-full h-[340px] object-cover group-hover:scale-110 transition duration-700"
+                className="w-full h-full object-contain group-hover:scale-105 transition duration-500 bg-black/20"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-              <div className="absolute bottom-6 left-6">
-                <h3 className="text-xl font-bold group-hover:text-[#fcab0f] transition">
-                  {item.name}
-                </h3>
-              </div>
             </motion.div>
           ))}
         </div>
@@ -150,13 +165,15 @@ const Work = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            onClick={() => setSelected(null)}
           >
             <motion.div
               initial={{ scale: 0.92, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.92, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="max-w-4xl w-full rounded-3xl overflow-hidden border border-white/10 bg-black my-auto relative"
+              className="max-w-5xl w-full rounded-3xl overflow-hidden border border-white/10 bg-black my-auto relative"
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
             >
               <button
                 onClick={() => setSelected(null)}
@@ -164,21 +181,25 @@ const Work = () => {
               >
                 ✕
               </button>
+              
+              <div className="md:flex md:max-h-[85vh]">
+                <div className="md:w-1/2 flex-shrink-0 bg-black">
+                  <img
+                    src={selected.img}
+                    alt={selected.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
 
-              <img
-                src={selected.img}
-                alt={selected.name}
-                className="w-full h-64 md:h-80 object-cover"
-              />
+                <div className="md:w-1/2 p-6 md:p-10 flex flex-col justify-center overflow-y-auto">
+                  <h2 className="text-2xl md:text-3xl font-black mb-4 uppercase">
+                    {selected.name}
+                  </h2>
 
-              <div className="p-8">
-                <h2 className="text-3xl font-black mb-4 uppercase">
-                  {selected.name}
-                </h2>
-
-                <p className="text-gray-400 text-lg leading-relaxed">
-                  {selected.description}
-                </p>
+                  <p className="text-gray-400 text-base md:text-lg leading-relaxed">
+                    {selected.description}
+                  </p>
+                </div>
               </div>
             </motion.div>
           </motion.div>
