@@ -31,11 +31,13 @@ const Work = () => {
     {
       name: "Niphad Election 2024",
       img: Img3,
+      displayItem: "Niphad Vidhansabha Campaign",
       description: "Executed a multi-platform digital marketing strategy for the Niphad 2024 election, enhancing online presence and driving significant voter outreach for the Niphad Assembly campaign."
     },
     {
       name: "Malegaon Election 2024",
       img: Img6,
+      displayItem: "Malegaon Vidhansabha Campaign",
       description: "Designed and executed a high-visibility campaign for the Malegaon 2024 election, managing all logistics, media, and public engagement for a seamless and impactful result."
     },
     {
@@ -51,11 +53,13 @@ const Work = () => {
     {
       name: "Pachora Election 2024",
       img: Img4,
+      displayItem: "Pachora Vidhansabha Campaign",
       description: "Crafted a compelling narrative for Hon. MLA Kishorappa Patil in the Pachora 2024 election, strengthening their public image and improving stakeholder engagement."
     },
     {
       name: "Vidhansabha Election 2024",
       img: Img9,
+      displayItem: "Nashik Vidhansabha Campaign",
       description: "Orchestrated a grassroots movement for the Nashik Assembly 2024 elections, mobilizing community support and influencing policy change through a powerful, resonant campaign."
     },
     
@@ -73,6 +77,7 @@ const Work = () => {
     {
       name: "Loksabha Election 2024",
       img: Img11,
+      displayItem: "Nashik Loksabha Campaign",
       description: "Created a full-scale branding and awareness campaign for the Nashik Loksabha 2024 election, leading to a significant increase in positive media mentions and voter turnout."
     },
     {
@@ -101,6 +106,12 @@ const Work = () => {
       description: "Provided end-to-end strategic communication for Rajmudra Induction, securing their brand identity and achieving early market adoption in the industrial sector."
     }
   ];
+
+  // Get the names of items that are linked from other items
+  const linkedItemNames = new Set(items.map(item => item.displayItem).filter(Boolean));
+
+  // Filter the items to exclude those that are linked from elsewhere
+  const gridItems = items.filter(item => !linkedItemNames.has(item.name));
 
   return (
     <div className="w-full bg-black text-white overflow-hidden relative">
@@ -131,10 +142,17 @@ const Work = () => {
 
         {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {items.map((item, i) => (
+          {gridItems.map((item, i) => (
             <motion.div
               key={i}
-              onClick={() => setSelected(item)}
+              onClick={() => {
+                if (item.displayItem) {
+                  const itemToShow = items.find(it => it.name === item.displayItem);
+                  setSelected(itemToShow || item);
+                } else {
+                  setSelected(item);
+                }
+              }}
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
