@@ -68,9 +68,9 @@ const Contact = () => {
           <div className="space-y-10">
 
             {[
-              { icon: MapPin, title: "Headquarters", text: "Mumbai • Nashik • Maharashtra" },
-              { icon: Phone, title: "Direct Line", text: "+91 93262 26888" },
-              { icon: Mail, title: "Email Address", text: "contact@jijauadvertising.in" },
+              { icon: MapPin, title: "Headquarters", text: "Jijau Advertising, Shreenath complex, near, Sinhgad Campus Rd, Vadgaon Budruk, Pune, Maharashtra 411041" },
+              { icon: Phone, title: "Direct Line", text: "+91  9145200222" },
+              { icon: Mail, title: "Email Address", text: "jijauadvertising@gmail.com" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -89,12 +89,12 @@ const Contact = () => {
           </div>
 
           {/* WhatsApp CTA */}
-          <a
-            href="https://wa.me/919326226888"
+          {/* <a
+            href="https://wa.me/91 9145200222"
             className="mt-16 inline-flex items-center gap-4 bg-gradient-to-r from-[#25D366] to-green-400 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-all duration-300 shadow-lg"
           >
             <MessageCircle size={24} /> Direct WhatsApp Strategy
-          </a>
+          </a> */}
         </motion.div>
 
         {/* ---- CONTACT FORM ---- */}
